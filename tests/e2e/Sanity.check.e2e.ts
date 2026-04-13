@@ -14,7 +14,7 @@ test.describe('Sanity', () => {
 
       await expect(
         page.getByRole('heading', {
-          name: 'Boilerplate Code for Your Next.js Project with Tailwind CSS',
+          name: 'Sacred history, thoughtfully shared',
         })
       ).toBeVisible();
     });
@@ -27,7 +27,7 @@ test.describe('Sanity', () => {
       await expect(page).toHaveURL(/about$/);
 
       await expect(
-        page.getByText('Welcome to our About page', { exact: false })
+        page.getByText('Garah Anand exists to preserve', { exact: false })
       ).toBeVisible();
     });
 
@@ -39,7 +39,7 @@ test.describe('Sanity', () => {
       await expect(page).toHaveURL(/portfolio$/);
 
       await expect(
-        page.locator('main').getByRole('link', { name: /^Portfolio/ })
+        page.locator('main').getByRole('link', { name: /^Story / })
       ).toHaveCount(6);
     });
   });

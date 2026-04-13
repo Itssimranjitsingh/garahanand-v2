@@ -9,7 +9,7 @@ test.describe('Visual testing', () => {
 
       await expect(
         page.getByRole('heading', {
-          name: 'Boilerplate Code for Your Next.js Project with Tailwind CSS',
+          name: 'Sacred history, thoughtfully shared',
         })
       ).toBeVisible();
 
@@ -22,7 +22,9 @@ test.describe('Visual testing', () => {
       await page.goto('/portfolio');
 
       await expect(
-        page.getByText('Welcome to my portfolio page!')
+        page.getByText('Here you can explore a growing collection', {
+          exact: false,
+        })
       ).toBeVisible();
 
       await takeSnapshot(page, testInfo);
@@ -33,7 +35,9 @@ test.describe('Visual testing', () => {
     }, testInfo) => {
       await page.goto('/about');
 
-      await expect(page.getByText('Welcome to our About page!')).toBeVisible();
+      await expect(
+        page.getByText('Garah Anand exists to preserve', { exact: false })
+      ).toBeVisible();
 
       await takeSnapshot(page, testInfo);
     });
@@ -44,7 +48,7 @@ test.describe('Visual testing', () => {
       await page.goto('/portfolio/2');
 
       await expect(
-        page.getByText('Created a set of promotional')
+        page.getByText('This article is part of Garah Anand', { exact: false })
       ).toBeVisible();
 
       await takeSnapshot(page, testInfo);
@@ -57,7 +61,7 @@ test.describe('Visual testing', () => {
 
       await expect(
         page.getByRole('heading', {
-          name: 'Code de démarrage pour Next.js avec Tailwind CSS',
+          name: 'Une histoire sacrée, partagée avec soin',
         })
       ).toBeVisible();
 
