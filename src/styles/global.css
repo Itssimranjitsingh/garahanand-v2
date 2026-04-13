@@ -1,3 +1,64 @@
 @layer theme, base, clerk, components, utilities; /* Ensure Clerk is compatible with Tailwind CSS v4 */
 
 @import 'tailwindcss';
+
+@theme inline {
+  --font-heading: var(--font-playfair), ui-serif, Georgia, serif;
+  --font-body: var(--font-eb-garamond), ui-serif, Georgia, serif;
+  --font-gurmukhi: var(--font-noto-gurmukhi), 'Noto Serif Gurmukhi', serif;
+}
+
+@layer base {
+  /**
+   * Typography: Playfair (headings), EB Garamond (body). Punjabi (`lang="pa"`): Noto Serif Gurmukhi sitewide.
+   * Paper texture: DESIGN_SYSTEM.md.
+   */
+  body {
+    min-height: 100dvh;
+    font-family: var(--font-body);
+    line-height: 1.7;
+    background-color: rgb(245 230 211);
+    background-image: url('/assets/paper_texture/01_paper_texture.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  :where(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-heading);
+    line-height: 1.3;
+  }
+
+  html[lang='pa'] body {
+    font-family: var(--font-gurmukhi);
+    line-height: 1.75;
+  }
+
+  html[lang='pa'] :where(h1, h2, h3, h4, h5, h6) {
+    font-family: var(--font-gurmukhi);
+    line-height: 1.4;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: rgba(255, 248, 235, 0.65);
+    pointer-events: none;
+  }
+
+  body > * {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@layer components {
+  /** Gurmukhi quote on non-`pa` locales (Noto Serif Gurmukhi is already global on `lang="pa"`). */
+  .gurmukhi-quote {
+    font-family: var(--font-gurmukhi);
+    line-height: 1.75;
+  }
+}

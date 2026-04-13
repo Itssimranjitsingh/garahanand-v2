@@ -36,7 +36,7 @@ test.describe('Visual testing', () => {
       await page.goto('/about');
 
       await expect(
-        page.getByText('Garah Anand exists to preserve', { exact: false })
+        page.getByText('Garah Anand is a space dedicated', { exact: false })
       ).toBeVisible();
 
       await takeSnapshot(page, testInfo);
@@ -54,14 +54,14 @@ test.describe('Visual testing', () => {
       await takeSnapshot(page, testInfo);
     });
 
-    test('should take screenshot of the French homepage', async ({
+    test('should take screenshot of the Punjabi homepage', async ({
       page,
     }, testInfo) => {
-      await page.goto('/fr');
+      await page.goto('/pa');
 
       await expect(
         page.getByRole('heading', {
-          name: 'Une histoire sacrée, partagée avec soin',
+          name: 'ਪਵਿੱਤਰ ਇਤਿਹਾਸ, ਸੋਚ-ਸਮਝ ਕੇ ਸਾਂਝਾ',
         })
       ).toBeVisible();
 

@@ -27,7 +27,7 @@ test.describe('Sanity', () => {
       await expect(page).toHaveURL(/about$/);
 
       await expect(
-        page.getByText('Garah Anand exists to preserve', { exact: false })
+        page.getByText('Garah Anand is a space dedicated', { exact: false })
       ).toBeVisible();
     });
 

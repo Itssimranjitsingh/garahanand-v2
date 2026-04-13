@@ -21,6 +21,7 @@ const config: KnipConfig = {
   // Binaries to ignore during analysis
   ignoreBinaries: [
     'production', // False positive raised with dotenv-cli
+    'dotenv', // Used in .github/workflows/checkly.yml via npx dotenv
   ],
   compilers: {
     css: (text: string) => [...text.matchAll(/(?<=@)import[^;]+/g)].join('\n'),

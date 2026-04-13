@@ -2,43 +2,30 @@
   "RootLayout": {
     "home_link": "Home",
     "about_link": "About",
-    "counter_link": "Counter",
     "portfolio_link": "Portfolio",
     "sign_in_link": "Sign in",
     "sign_up_link": "Sign up"
   },
   "BaseTemplate": {
-    "description": "Sikh history, stories, and learning — told with care.",
+    "description": "Connecting Our Roots,\nReviving Our Traditions.",
     "footer_text": "© {year} {name}. All rights reserved.",
     "main_navigation_label": "Main navigation"
   },
   "Index": {
     "meta_title": "Garah Anand | Sikh history and stories",
     "meta_description": "Garah Anand shares Sikh history and narratives in a calm, readable space — for study, reflection, and preservation.",
+    "satgur_prasad_image_alt": "Ik Onkar and Satgur Prasad in Gurmukhi calligraphy",
     "index_section_title": "Sacred history, thoughtfully shared",
     "index_paragraph_1": "Garah Anand is a home for Sikh history: events, people, and ideas presented with clarity and respect. We focus on reading comfort, careful sourcing, and a tone that honours the tradition.",
-    "index_paragraph_2": "Whether you are new to these stories or returning to them, we hope this site helps you learn at your own pace — in English or French — without distraction.",
+    "index_paragraph_2": "Whether you are new to these stories or returning to them, we hope this site helps you learn at your own pace — in English, Hindi, or Punjabi — without distraction.",
     "index_point_1": "Long-form articles and curated material for deeper reading",
     "index_point_2": "A calm, archival visual style that keeps attention on the text",
-    "index_point_3": "Bilingual experience so more readers can take part"
-  },
-  "Counter": {
-    "meta_title": "Counter",
-    "meta_description": "A small signed-in demo that reads and writes a count in the database."
-  },
-  "CounterForm": {
-    "presentation": "The counter is stored in the database and incremented by the value you provide.",
-    "label_increment": "Increment by",
-    "button_increment": "Increment",
-    "error_increment_range": "Value must be between 1 and 3"
-  },
-  "CurrentCount": {
-    "count": "Count: {count}"
+    "index_point_3": "English, Hindi, and Punjabi so more readers can take part"
   },
   "About": {
     "meta_title": "About Garah Anand",
-    "meta_description": "Learn about Garah Anand’s mission to present Sikh history and stories with dignity and clarity.",
-    "about_paragraph": "Garah Anand exists to preserve and share Sikh history in a form that is easy to read and easy to trust. We believe careful language, generous spacing, and honest context help readers connect with these narratives over time."
+    "meta_description": "Garah Anand revives the age-old traditions of our Gurus for a principle-driven life.",
+    "about_paragraph": "Garah Anand is a space dedicated to reviving the age-old traditions of our Gurus for a principle-driven life."
   },
   "Portfolio": {
     "meta_title": "Stories",
@@ -75,5 +62,19 @@
   },
   "LocaleSwitcher": {
     "change_language": "Change language"
+  },
+  "Donate": {
+    "title": "Support our seva",
+    "quote": "ਸਤਿਗੁਰ ਕੀ ਸੇਵਾ ਸਫਲ ਹੈ ਜੇ ਕੋ ਕਰੇ ਚਿਤੁ ਲਾਇ॥",
+    "description": "Your Dasvandh helps us provide free paper, qalam, and traditionally made inks to over 450 Likharis.",
+    "bank_heading": "Bank transfer",
+    "account_name_label": "Account name",
+    "account_name_value": "Garh Anand Welfare Society",
+    "account_number_label": "Account number",
+    "account_number_value": "50200098923091",
+    "ifsc_label": "IFSC code",
+    "ifsc_value": "HDFC0001331",
+    "whatsapp_receipt": "Send your receipt on WhatsApp",
+    "qr_alt": "PhonePe QR code for donations to Garh Anand Welfare Society"
   }
 }

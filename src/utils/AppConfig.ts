@@ -1,4 +1,4 @@
-import { enUS, frFR } from '@clerk/localizations';
+import { enUS, hiIN } from '@clerk/localizations';
 import type { LocalizationResource } from '@clerk/shared/types';
 import type { LocalePrefixMode } from 'next-intl/routing';
 
@@ -8,15 +8,17 @@ const localePrefix: LocalePrefixMode = 'as-needed';
 export const AppConfig = {
   name: 'Garah Anand',
   i18n: {
-    locales: ['en', 'fr'],
+    locales: ['en', 'hi', 'pa'],
     defaultLocale: 'en',
     localePrefix,
   },
 };
 
+/** Clerk does not ship Punjabi UI strings; Punjabi routes use English for auth screens. */
 const supportedLocales: Record<string, LocalizationResource> = {
   en: enUS,
-  fr: frFR,
+  hi: hiIN,
+  pa: enUS,
 };
 
 export const ClerkLocalizations = {

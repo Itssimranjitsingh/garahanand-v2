@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { fontCssVariableClasses } from '@/libs/Fonts';
 import { routing } from '@/libs/I18nRouting';
 import '@/styles/global.css';
 
@@ -52,8 +53,12 @@ export default async function RootLayout(props: {
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={fontCssVariableClasses}
+      suppressHydrationWarning
+    >
+      <body className="antialiased" suppressHydrationWarning>
         <NextIntlClientProvider>{props.children}</NextIntlClientProvider>
       </body>
     </html>
