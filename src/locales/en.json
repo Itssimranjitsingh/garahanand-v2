@@ -3,10 +3,12 @@
     "home_link": "Home",
     "about_link": "About",
     "portfolio_link": "Portfolio",
+    "blog_link": "Blog",
     "sign_in_link": "Sign in",
     "sign_up_link": "Sign up"
   },
   "BaseTemplate": {
+    "logo_alt": "Garah Anand logo — Ik Onkar, Sri Akal Ji Sahai, and Gurmukhi name",
     "description": "Connecting Our Roots,\nReviving Our Traditions.",
     "footer_text": "© {year} {name}. All rights reserved.",
     "main_navigation_label": "Main navigation"
@@ -26,6 +28,21 @@
     "meta_title": "About Garah Anand",
     "meta_description": "Garah Anand revives the age-old traditions of our Gurus for a principle-driven life.",
     "about_paragraph": "Garah Anand is a space dedicated to reviving the age-old traditions of our Gurus for a principle-driven life."
+  },
+  "BlogPage": {
+    "meta_title": "Blog | Garah Anand",
+    "meta_description": "Articles and reflections from Garah Anand.",
+    "heading": "Blog",
+    "intro": "Long-form writing on Sikh history, tradition, and community — published here as it is ready.",
+    "empty_message": "No posts yet. New pieces will appear here once they are published.",
+    "read_post": "Read article",
+    "post_image_alt": "Image for {title}"
+  },
+  "BlogSlugPage": {
+    "back_to_blog": "← Blog",
+    "hero_image_alt": "Image for {title}",
+    "not_found_title": "Post not found",
+    "not_found_description": "This blog post could not be found."
   },
   "Portfolio": {
     "meta_title": "Stories",

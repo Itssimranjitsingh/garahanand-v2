@@ -1,9 +1,21 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { render } from 'vitest-browser-react';
 import { page } from 'vitest/browser';
 import messages from '@/locales/en.json';
 import { BaseTemplate } from './BaseTemplate';
+
+vi.mock('@/libs/I18nNavigation', () => ({
+  Link: (props: {
+    href: string;
+    children: React.ReactNode;
+    className?: string;
+  }) => (
+    <a href={props.href} className={props.className}>
+      {props.children}
+    </a>
+  ),
+}));
 
 describe('Base template', () => {
   describe('Render method', () => {

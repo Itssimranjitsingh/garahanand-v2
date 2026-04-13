@@ -42,6 +42,14 @@ export default async function Layout(props: {
               {t('portfolio_link')}
             </Link>
           </li>
+          <li>
+            <Link
+              href="/blog/"
+              className="border-none text-gray-700 hover:text-gray-900"
+            >
+              {t('blog_link')}
+            </Link>
+          </li>
         </>
       }
       rightNav={
