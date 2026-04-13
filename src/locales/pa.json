@@ -95,6 +95,10 @@
   "LocaleSwitcher": {
     "change_language": "ਭਾਸ਼ਾ ਬਦਲੋ"
   },
+  "PaperTextureSwitcher": {
+    "change_background": "ਪਿਛੋਕੜ ਦਾ ਕਾਗਜ਼ ਬਦਲੋ",
+    "option_label": "ਕਾਗਜ਼ · {id}"
+  },
   "Donate": {
     "title": "ਸਾਡੀ ਸੇਵਾ ਦਾ ਸਹਿਯੋਗ",
     "quote": "ਸਤਿਗੁਰ ਕੀ ਸੇਵਾ ਸਫਲ ਹੈ ਜੇ ਕੋ ਕਰੇ ਚਿਤੁ ਲਾਇ॥",

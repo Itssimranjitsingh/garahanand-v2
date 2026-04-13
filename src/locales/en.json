@@ -95,6 +95,10 @@
   "LocaleSwitcher": {
     "change_language": "Change language"
   },
+  "PaperTextureSwitcher": {
+    "change_background": "Change background paper",
+    "option_label": "Paper · {id}"
+  },
   "Donate": {
     "title": "Support our seva",
     "quote": "ਸਤਿਗੁਰ ਕੀ ਸੇਵਾ ਸਫਲ ਹੈ ਜੇ ਕੋ ਕਰੇ ਚਿਤੁ ਲਾਇ॥",

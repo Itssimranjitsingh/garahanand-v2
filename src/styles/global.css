@@ -25,6 +25,34 @@
     background-attachment: fixed;
   }
 
+  html[data-paper-texture='01_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/01_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='03_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/03_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='07_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/07_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='09_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/09_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='16_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/16_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='189_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/189_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='27_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/27_paper_texture.jpg');
+  }
+
   :where(h1, h2, h3, h4, h5, h6) {
     font-family: var(--font-heading);
     line-height: 1.3;

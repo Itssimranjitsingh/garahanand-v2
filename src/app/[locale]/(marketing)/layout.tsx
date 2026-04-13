@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
+import { PaperTextureSwitcher } from '@/components/PaperTextureSwitcher';
 import { Link } from '@/libs/I18nNavigation';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
@@ -78,6 +79,10 @@ export default async function Layout(props: {
             >
               {t('sign_up_link')}
             </Link>
+          </li>
+
+          <li>
+            <PaperTextureSwitcher />
           </li>
 
           <li>

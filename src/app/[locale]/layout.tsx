@@ -2,8 +2,10 @@ import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import Script from 'next/script';
 import { fontCssVariableClasses } from '@/libs/Fonts';
 import { routing } from '@/libs/I18nRouting';
+import { getPaperTextureInlineInitScript } from '@/libs/PaperTexture';
 import '@/styles/global.css';
 
 export const metadata: Metadata = {
@@ -59,6 +61,9 @@ export default async function RootLayout(props: {
       suppressHydrationWarning
     >
       <body className="antialiased" suppressHydrationWarning>
+        <Script id="paper-texture-init" strategy="beforeInteractive">
+          {getPaperTextureInlineInitScript()}
+        </Script>
         <NextIntlClientProvider>{props.children}</NextIntlClientProvider>
       </body>
     </html>

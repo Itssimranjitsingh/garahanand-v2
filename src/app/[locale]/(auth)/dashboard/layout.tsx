@@ -1,6 +1,7 @@
 import { SignOutButton } from '@clerk/nextjs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
+import { PaperTextureSwitcher } from '@/components/PaperTextureSwitcher';
 import { Link } from '@/libs/I18nNavigation';
 import { BaseTemplate } from '@/templates/BaseTemplate';
 
@@ -48,6 +49,10 @@ export default async function DashboardLayout(props: {
                 {t('sign_out')}
               </button>
             </SignOutButton>
+          </li>
+
+          <li>
+            <PaperTextureSwitcher />
           </li>
 
           <li>
