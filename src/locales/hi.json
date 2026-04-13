@@ -3,6 +3,7 @@
     "home_link": "होम",
     "about_link": "परिचय",
     "portfolio_link": "पोर्टफोलियो",
+    "gallery_link": "गैलरी",
     "blog_link": "ब्लॉग",
     "sign_in_link": "साइन इन",
     "sign_up_link": "साइन अप"
@@ -43,6 +44,20 @@
     "hero_image_alt": "{title} के लिए छवि",
     "not_found_title": "पोस्ट नहीं मिला",
     "not_found_description": "यह ब्लॉग पोस्ट नहीं मिली।"
+  },
+  "GalleryPage": {
+    "meta_title": "गैलरी | गराह आनंद",
+    "meta_description": "गराह आनंद की तस्वीरें और चित्र देखें।",
+    "heading": "गैलरी",
+    "intro": "हमारे संग्रह की तस्वीरें और चित्र। बड़ा करके देखने के लिए थंबनेल चुनें और क्रम में आगे-पीछे जाएँ।",
+    "empty": "मीडिया फ़ोल्डर में कोई चित्र नहीं मिला।",
+    "thumbnail_alt": "थंबनेल: {name}",
+    "lightbox_label": "बड़ा चित्र",
+    "lightbox_alt": "चित्र: {name}",
+    "close": "बंद करें",
+    "close_backdrop": "गैलरी बंद करें",
+    "previous": "पिछला",
+    "next": "अगला"
   },
   "Portfolio": {
     "meta_title": "कहानियाँ",

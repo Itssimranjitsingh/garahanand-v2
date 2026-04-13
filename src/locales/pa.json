@@ -3,6 +3,7 @@
     "home_link": "ਹੋਮ",
     "about_link": "ਬਾਰੇ",
     "portfolio_link": "ਸੰਗ੍ਰਹਿ",
+    "gallery_link": "ਗੈਲਰੀ",
     "blog_link": "ਬਲਾਗ",
     "sign_in_link": "ਸਾਈਨ ਇਨ",
     "sign_up_link": "ਸਾਈਨ ਅੱਪ"
@@ -43,6 +44,20 @@
     "hero_image_alt": "{title} ਲਈ ਤਸਵੀਰ",
     "not_found_title": "ਪੋਸਟ ਨਹੀਂ ਮਿਲੀ",
     "not_found_description": "ਇਹ ਬਲਾਗ ਪੋਸਟ ਨਹੀਂ ਮਿਲੀ।"
+  },
+  "GalleryPage": {
+    "meta_title": "ਗੈਲਰੀ | ਗਰਾਹ ਆਨੰਦ",
+    "meta_description": "ਗਰਾਹ ਆਨੰਦ ਦੀਆਂ ਤਸਵੀਰਾਂ ਅਤੇ ਚਿੱਤਰ ਵੇਖੋ।",
+    "heading": "ਗੈਲਰੀ",
+    "intro": "ਸਾਡੇ ਸੰਗ੍ਰਹਿ ਦੀਆਂ ਤਸਵੀਰਾਂ ਅਤੇ ਚਿੱਤਰ। ਵੱਡਾ ਕਰਕੇ ਵੇਖਣ ਲਈ ਥੰਮਨੇਲ ਚੁਣੋ ਅਤੇ ਸੈਟ ਵਿੱਚ ਅੱਗੇ-ਪਿੱਛੇ ਜਾਓ।",
+    "empty": "ਮੀਡੀਆ ਫੋਲਡਰ ਵਿੱਚ ਕੋਈ ਚਿੱਤਰ ਨਹੀਂ ਮਿਲੇ।",
+    "thumbnail_alt": "ਥੰਮਨੇਲ: {name}",
+    "lightbox_label": "ਵੱਡੀ ਤਸਵੀਰ",
+    "lightbox_alt": "ਤਸਵੀਰ: {name}",
+    "close": "ਬੰਦ ਕਰੋ",
+    "close_backdrop": "ਗੈਲਰੀ ਬੰਦ ਕਰੋ",
+    "previous": "ਪਿਛਲਾ",
+    "next": "ਅਗਲਾ"
   },
   "Portfolio": {
     "meta_title": "ਕਹਾਣੀਆਂ",

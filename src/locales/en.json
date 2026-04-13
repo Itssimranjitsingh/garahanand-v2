@@ -3,6 +3,7 @@
     "home_link": "Home",
     "about_link": "About",
     "portfolio_link": "Portfolio",
+    "gallery_link": "Gallery",
     "blog_link": "Blog",
     "sign_in_link": "Sign in",
     "sign_up_link": "Sign up"
@@ -43,6 +44,20 @@
     "hero_image_alt": "Image for {title}",
     "not_found_title": "Post not found",
     "not_found_description": "This blog post could not be found."
+  },
+  "GalleryPage": {
+    "meta_title": "Gallery | Garah Anand",
+    "meta_description": "Browse photographs and images from Garah Anand.",
+    "heading": "Gallery",
+    "intro": "Photographs and images from our collection. Select a thumbnail to view it larger and step through the set.",
+    "empty": "No images were found in the media folder.",
+    "thumbnail_alt": "Thumbnail: {name}",
+    "lightbox_label": "Enlarged image",
+    "lightbox_alt": "Image: {name}",
+    "close": "Close",
+    "close_backdrop": "Close gallery",
+    "previous": "Previous",
+    "next": "Next"
   },
   "Portfolio": {
     "meta_title": "Stories",

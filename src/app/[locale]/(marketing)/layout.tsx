@@ -44,6 +44,14 @@ export default async function Layout(props: {
           </li>
           <li>
             <Link
+              href="/gallery/"
+              className="border-none text-gray-700 hover:text-gray-900"
+            >
+              {t('gallery_link')}
+            </Link>
+          </li>
+          <li>
+            <Link
               href="/blog/"
               className="border-none text-gray-700 hover:text-gray-900"
             >
