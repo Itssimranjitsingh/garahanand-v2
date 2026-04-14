@@ -19,7 +19,7 @@ export const BaseTemplate = (props: {
           <div className="flex flex-col gap-6 pt-16 pb-8 sm:flex-row sm:items-center sm:gap-8">
             <Link href="/" className="mx-auto shrink-0 sm:mx-0">
               <Image
-                src="/assets/main/logo.png"
+                src="/assets/others/logo.png"
                 alt={t('logo_alt')}
                 width={112}
                 height={112}

@@ -76,7 +76,7 @@ export const DonateSection = async (props: DonateSectionProps) => {
         <figure className="flex w-full min-w-0 shrink-0 flex-col items-center md:items-start">
           <div className="relative mx-auto aspect-square w-full max-w-[min(100%,17.5rem)] sm:max-w-[min(100%,20rem)]">
             <Image
-              src="/assets/main/qr.jpeg"
+              src="/assets/others/qr.jpeg"
               alt={t('qr_alt')}
               fill
               sizes="(max-width: 768px) 100vw, 280px"

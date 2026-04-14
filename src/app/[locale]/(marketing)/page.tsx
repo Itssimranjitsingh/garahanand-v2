@@ -34,7 +34,7 @@ export default async function Index(props: IndexPageProps) {
     <>
       <figure className="relative mx-auto mb-8 h-44 w-full max-w-sm select-none md:h-52">
         <Image
-          src="/assets/main/satgur_prasad_white.png"
+          src="/assets/others/satgur_prasad_white.png"
           alt={t('satgur_prasad_image_alt')}
           fill
           sizes="(max-width: 768px) 100vw, 24rem"
