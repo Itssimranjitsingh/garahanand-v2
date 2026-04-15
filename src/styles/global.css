@@ -29,6 +29,10 @@
     background-image: url('/assets/paper_texture/01_paper_texture.jpg');
   }
 
+  html[data-paper-texture='02_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/02_paper_texture.jpg');
+  }
+
   html[data-paper-texture='03_paper_texture.jpg'] body {
     background-image: url('/assets/paper_texture/03_paper_texture.jpg');
   }
@@ -45,12 +49,44 @@
     background-image: url('/assets/paper_texture/16_paper_texture.jpg');
   }
 
-  html[data-paper-texture='189_paper_texture.jpg'] body {
-    background-image: url('/assets/paper_texture/189_paper_texture.jpg');
+  html[data-paper-texture='25_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/25_paper_texture.jpg');
   }
 
   html[data-paper-texture='27_paper_texture.jpg'] body {
     background-image: url('/assets/paper_texture/27_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='101_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/101_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='153_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/153_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='175_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/175_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='184_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/184_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='185_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/185_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='186_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/186_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='189_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/189_paper_texture.jpg');
+  }
+
+  html[data-paper-texture='190_paper_texture.jpg'] body {
+    background-image: url('/assets/paper_texture/190_paper_texture.jpg');
   }
 
   :where(h1, h2, h3, h4, h5, h6) {

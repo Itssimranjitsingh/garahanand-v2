@@ -7,12 +7,21 @@ export const PAPER_TEXTURE_DATA_ATTR = 'data-paper-texture';
 /** Available paper textures under `public/assets/paper_texture/`. */
 export const PAPER_TEXTURE_FILES = [
   '01_paper_texture.jpg',
+  '02_paper_texture.jpg',
   '03_paper_texture.jpg',
   '07_paper_texture.jpg',
   '09_paper_texture.jpg',
   '16_paper_texture.jpg',
-  '189_paper_texture.jpg',
+  '25_paper_texture.jpg',
   '27_paper_texture.jpg',
+  '101_paper_texture.jpg',
+  '153_paper_texture.jpg',
+  '175_paper_texture.jpg',
+  '184_paper_texture.jpg',
+  '185_paper_texture.jpg',
+  '186_paper_texture.jpg',
+  '189_paper_texture.jpg',
+  '190_paper_texture.jpg',
 ] as const;
 
 export type PaperTextureFile = (typeof PAPER_TEXTURE_FILES)[number];
