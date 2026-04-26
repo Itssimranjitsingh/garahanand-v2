@@ -22,7 +22,7 @@ export async function generateMetadata(
   };
 }
 
-export default async function Index(props: IndexPageProps) {
+export default async function V1IndexPage(props: IndexPageProps) {
   const { locale } = await props.params;
   setRequestLocale(locale);
   const t = await getTranslations({
