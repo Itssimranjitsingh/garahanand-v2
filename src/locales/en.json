@@ -14,6 +14,256 @@
     "footer_text": "© {year} {name}. All rights reserved.",
     "main_navigation_label": "Main navigation"
   },
+  "HomePage": {
+    "meta_title": "GarhAnand — Sacred Larivaar Learning",
+    "meta_description": "GarhAnand teaches the ancient art of Larivaar — continuous Gurmukhi script — as a path toward deeper understanding of Gurbani."
+  },
+  "HomeNavbar": {
+    "home_aria_label": "GarhAnand home",
+    "logo_alt": "GarhAnand logo",
+    "brand_name": "GarhAnand",
+    "learn": "Learn",
+    "activities": "Activities",
+    "missions": "Missions",
+    "camps": "Camps",
+    "about": "About",
+    "blog": "Blog",
+    "team": "Team",
+    "seva": "Seva"
+  },
+  "HomeHero": {
+    "satgur_prasad_image_alt": "Ik Onkar and Satgur Prasad in Gurmukhi calligraphy",
+    "eyebrow": "ੴ   A Sacred Learning Platform",
+    "title_line_1": "Return to the Unbroken",
+    "title_line_2": "Word of the Guru",
+    "description": "GarhAnand teaches the ancient art of Larivaar — continuous Gurmukhi script — as a path toward deeper understanding of Gurbani.",
+    "primary_cta": "Begin Learning",
+    "secondary_cta": "Our Mission",
+    "mool_mantar_larivaar": "ਸਤਿਨਾਮੁਕਰਤਾਪੁਰਖੁਨਿਰਭਉਨਿਰਵੈਰੁਅਕਾਲਮੂਰਤਿਅਜੂਨੀਸੈਭੰਗੁਰਪ੍ਰਸਾਦਿ",
+    "mool_mantar_caption": "Mool Mantar — Guru Granth Sahib, Ang 1 (Larivaar form)",
+    "scroll_hint": "Scroll"
+  },
+  "HomeLarivaar": {
+    "eyebrow": "Core Feature",
+    "title": "Experience Larivaar",
+    "description": "The Guru Granth Sahib was originally composed in continuous, unspaced script. Toggle between Larivaar and Pad Ched to experience both forms. Hover any word to reveal its meaning.",
+    "larivaar_toggle": "Larivaar",
+    "pad_ched_toggle": "Pad Ched",
+    "source": "Mool Mantar — Guru Granth Sahib, Ang 1",
+    "words": [
+      {
+        "gurmukhi": "ਸਤਿ",
+        "roman": "Sati",
+        "meaning": "Truth, the Eternal"
+      },
+      {
+        "gurmukhi": "ਨਾਮੁ",
+        "roman": "Naamu",
+        "meaning": "The Name"
+      },
+      {
+        "gurmukhi": "ਕਰਤਾ",
+        "roman": "Kartaa",
+        "meaning": "The Creator"
+      },
+      {
+        "gurmukhi": "ਪੁਰਖੁ",
+        "roman": "Purakhu",
+        "meaning": "The All-Pervading Being"
+      },
+      {
+        "gurmukhi": "ਨਿਰਭਉ",
+        "roman": "Nirbhau",
+        "meaning": "Without Fear"
+      },
+      {
+        "gurmukhi": "ਨਿਰਵੈਰੁ",
+        "roman": "Nirvair",
+        "meaning": "Without Enmity"
+      },
+      {
+        "gurmukhi": "ਅਕਾਲ",
+        "roman": "Akaal",
+        "meaning": "Beyond Time"
+      },
+      {
+        "gurmukhi": "ਮੂਰਤਿ",
+        "roman": "Moorati",
+        "meaning": "Embodiment"
+      },
+      {
+        "gurmukhi": "ਅਜੂਨੀ",
+        "roman": "Ajooni",
+        "meaning": "Beyond Birth and Death"
+      },
+      {
+        "gurmukhi": "ਸੈਭੰ",
+        "roman": "Saibhan",
+        "meaning": "Self-Illumined"
+      }
+    ],
+    "cards": [
+      {
+        "title": "Larivaar",
+        "description": "Continuous, unbroken script as found in historical manuscripts and the original Guru Granth Sahib."
+      },
+      {
+        "title": "Pad Ched",
+        "description": "Modern word-separated form. Accessible but a departure from the original textual tradition."
+      },
+      {
+        "title": "Hover to Learn",
+        "description": "Pause on any word to see its transliteration and meaning. Learning through encounter, not memorisation."
+      }
+    ]
+  },
+  "HomeActivities": {
+    "eyebrow": "Core Activities",
+    "title": "Regenerating Ancient Practice",
+    "description": "Dedicated to preserving Sikh learning, strengthening Larivaar literacy, and bridging the distance between modern life and living tradition.",
+    "close_gallery": "Close",
+    "activities": [
+      {
+        "category": "gurbani",
+        "title": "Gurbani Writing",
+        "description": "Encouraging Sikhs to read and write Gurbani in Larivaar, forming a new generation of Likhari.",
+        "gallery_title": "Gurbani Writing Photos"
+      },
+      {
+        "category": "tradition",
+        "title": "Preserving Tradition",
+        "description": "Conserving Puratan Beerh Sahibs and Pothis so the living memory of the Panth is protected with care.",
+        "gallery_title": "Preserving Tradition Photos"
+      },
+      {
+        "category": "camps",
+        "title": "Camps and Workshops",
+        "description": "Conducting regular camps and hands-on workshops rooted in practice, sangat, and disciplined study.",
+        "gallery_title": "Camps and Workshops Photos"
+      },
+      {
+        "category": "online",
+        "title": "Online Learning",
+        "description": "Running online book clubs and one-to-one Akharkaari classes for Sikhs learning from around the world.",
+        "gallery_title": "Online Learning Photos"
+      }
+    ]
+  },
+  "HomeMissions": {
+    "eyebrow": "Upcoming Missions",
+    "title": "Expanding the Seva",
+    "description": "Building dedicated spaces for learning, preserving sacred musical traditions, and training the next generation in the disciplines of the Panth.",
+    "missions": [
+      {
+        "title": "Raag te Saaj",
+        "description": "Promoting the traditional way of Kirtan by teaching Guru ke Raag and Guru ke Saaj."
+      },
+      {
+        "title": "Vidyalay",
+        "description": "Establishing a center to train Sikhs in Gatka, Santhia, Raag Vidya, and Akharkaari."
+      }
+    ]
+  },
+  "HomeCamps": {
+    "eyebrow": "Immersive Learning",
+    "title": "Camps and Retreats",
+    "quote": "Learning Larivaar at the camp changed my relationship with Gurbani entirely. The text came alive in a way I had never experienced in twenty years of reading.",
+    "quote_attribution": "Camp Participant, Anandpur 2024",
+    "camps": [
+      {
+        "year": "2024",
+        "location": "Anandpur Sahib",
+        "title": "Winter Larivaar Camp",
+        "days": "5 days",
+        "snippet": "Forty-two students gathered in the sacred city of Anandpur for five days of morning paath, afternoon study, and evening reflection."
+      },
+      {
+        "year": "2023",
+        "location": "Amritsar",
+        "title": "Darbar Sahib Intensive",
+        "days": "3 days",
+        "snippet": "Held in the shadow of Harmandir Sahib, participants studied Larivaar in the context of kirtan and seva."
+      },
+      {
+        "year": "2023",
+        "location": "Himachal Pradesh",
+        "title": "Mountain Retreat",
+        "days": "7 days",
+        "snippet": "A remote study camp in the hills — minimal distraction, deep learning, and the sound of Gurbani in the open air."
+      }
+    ]
+  },
+  "HomeTeacher": {
+    "image_alt": "Jathedar Simranjeet Singh",
+    "name": "ਸਿਮਰਨਜੀਤ ਸਿੰਘ",
+    "role": "ਗੁਰੂ ਗ੍ਰੰਥ ਜੀ ਗੁਰੂ ਪੰਥ ਜੀ ਅਤੇ ਸਾਧਸੰਗਤਿ ਦਾ ਗੋਲਾ",
+    "eyebrow": "Our Guiding Light",
+    "title": "Words from Jathedar Ji",
+    "opening_verse": "ਧੰਨੁ ਸੁ ਕਾਗਦੁ ਕਲਮ ਧੰਨੁ ਧਨੁ ਭਾਂਡਾ ਧਨੁ ਮਸੁ ॥\nਧਨੁ ਲੇਖਾਰੀ ਨਾਨਕਾ ਜਿਨਿ ਨਾਮੁ ਲਿਖਾਇਆ ਸਚੁ ॥੧॥",
+    "excerpt": "ਸਤਿਗੁਰੁ ਸਚੇ ਪਾਤਿਸ਼ਾਹ ਨਿਰੰਕਾਰੀ ਜੋਤਿ ਗੁਰੂ ਨਾਨਕ ਸਾਹਿਬ ਜੀ ਨੇ ਸਮੁੱਚੀ ਮਾਨਵਤਾ ਤੇ ਉਧਾਰ ਲਈ ਜਨਮ ਧਾਰਿਆ। ਵੱਖ ਵੱਖ ਥਾਈਂ ਭਰਮਣ ਕਰਕੇ ਬੇਅੰਤ ਭਟਕਿਆ ਨੂੰ ਸਿੱਧੇ ਰਾਹ ਪਾਇਆ ਤੇ ਉਹਨਾਂ ਨੂੰ ਸਬਦ ਦੇ ਲੜ ਲਾਇਆ।",
+    "pull_quote": "ਕਹਤੇ ਪਵਿਤ੍ਰ ਸੁਣਤੇ ਸਭਿ ਧੰਨੁ ਲਿਖਤੀਂ ਕੁਲੁ ਤਾਰਿਆ ਜੀਉ ॥",
+    "pull_quote_caption": "ਹੱਥਾਂ ਨਾਲ ਗੁਰਬਾਣੀ ਲਿਖਿਆ ਹੱਥ ਪਵਿੱਤਰ ਹੁੰਦੇ ਨੇ।",
+    "read_complete_letter": "Read complete letter",
+    "close_letter": "Close",
+    "close_letter_aria": "Close Jathedar Ji letter",
+    "reflection": "ਹੱਥਾਂ ਨਾਲ ਗੁਰਬਾਣੀ ਲਿਖਿਆ ਹੱਥ ਪਵਿੱਤਰ ਹੁੰਦੇ ਨੇ। ਜੀਵਨ ਚ ਸਹਿਜ ਆਉਂਦਾ ਹੈ। ਗੁਰੂ ਪ੍ਰਤੀ ਪ੍ਰੇਮ ਵੱਧਦਾ ਹੈ।",
+    "closing_prayer": "ਅਰਦਾਸ ਹੈ ਕਿ ਮਹਾਰਾਜ ਸੱਚੇ ਪਾਤਸ਼ਾਹ ਕਿਰਪਾ ਬਣਾਈ ਰੱਖਣ ਲਗਾਤਾਰਾ ਚ ਸੇਵਾ ਲੈਂਦੇ ਰਹਿਣ।",
+    "closing_line": "ਨੀਚਾ ਅੰਦਰਿ ਨੀਚ ਜਾਤਿ ਨੀਚੀ ਹੂ ਅਤਿ ਨੀਚ",
+    "letter_paragraphs": [
+      "ਸਤਿਗੁਰੁ ਸਚੇ ਪਾਤਿਸ਼ਾਹ ਨਿਰੰਕਾਰੀ ਜੋਤਿ ਗੁਰੂ ਨਾਨਕ ਸਾਹਿਬ ਜੀ ਨੇ ਸਮੁੱਚੀ ਮਾਨਵਤਾ ਤੇ ਉਧਾਰ ਲਈ ਜਨਮ ਧਾਰਿਆ। ਵੱਖ ਵੱਖ ਥਾਈਂ ਭਰਮਣ ਕਰਕੇ ਬੇਅੰਤ ਭਟਕਿਆ ਨੂੰ ਸਿੱਧੇ ਰਾਹ ਪਾਇਆ ਤੇ ਉਹਨਾਂ ਨੂੰ ਸਬਦ ਦੇ ਲੜ ਲਾਇਆ। ਜਨਮਸਾਖੀਆਂ ਅਨੁਸਾਰ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਜਿੱਥੇ ਬਾਬਾ ਮਰਦਾਨਾ ਜੀ ਨੂੰ ਆਖਦੇ ਕਿ \"ਛੇੜ ਮਰਦਾਨਿਆ ਰਬਾਬ ਕਾਈ ਸਿਫਤ ਖ਼ੁਦਾ ਦੇ ਦੀਦਾਰ ਦੀ ਕਰੀਏ\" ਅਤੇ ਉਸ ਅੰਮ੍ਰਿਤ ਰੂਪੀ ਬਾਣੀ ਨੂੰ ਮਾਣਦੇ ਤੇ ਬਾਬਾ ਮਰਦਾਨਾ ਜੀ ਨਾਲ ਰਬਾਬ ਦੀ ਧੁੰਨ ਵਿੱਚ ਉਸ ਦਾ ਕੀਰਤਨ ਕਰਦੇ, ਓਥੇ ਜਨਮਸਾਖੀ ਚ ਇਹੁ ਵੀ ਪੜ੍ਹੀਦਾ ਹੈ ਕਿ ਗੁਰੂ ਸਾਹਿਬ ਉਸ ਗਾਵੀ ਹੋਈ ਬਾਣੀ ਨੂੰ ਕਾਗਦੁ ਪਰ ਲਿਖ ਲੈਂਦੇ ਸਨ। ਸਾਖੀਆਂ ਸਾਖ ਭਰਦੀਆਂ ਨੇ ਕਿ ਜਦੋਂ ਉਦਾਸੀਆਂ ਵੇਲੇ ਤੁਰਦੇ ਤਾਂ ਵੱਡੇ ਬੇਬੇ ਜੀ ਬੇਬੇ ਨਾਨਕੀ ਜੀ ਉਹਨਾਂ ਨੂੰ ਸਿਆਹੀ ਦੀਆਂ ਵੱਟੀਆਂ ਬਣਾ ਕਰ ਨਾਲ ਦਿੰਦੇ ਜਿਨ੍ਹਾਂ ਨੂੰ ਲੋੜ ਅਨੁਸਾਰ ਜਲ ਲਗਾ ਕੇ ਉਸ ਵਿਚ ਲੇਖਣੀ/ਕਲਮ ਡੋਬ ਕਰ ਲਿਖਿਆ ਜਾ ਸਕਦਾ ਸੀ। ਸੋ ਏਥੋ ਹੀ ਗੁਰਬਾਣੀ ਲਿਖਣ ਪਰੰਪਰਾ ਦਾ ਮੁੱਢ ਬੱਝਦਾ ਹੈ ਜੋ ਗੁਰੂ ਪਿਤਾ ਜੀ ਨੇ ਆਪ ਏਸ ਦੀ ਆਰੰਭਤਾ ਕੀਤੀ।",
+      "ਹੱਥ ਲਿਖਤ ਦਾ ਇਤਿਹਾਸ ਬਹੁਤ ਪੁਰਾਣਾ ਹੈ। ਮਨੁੱਖ ਬਹੁਤ ਲੰਮੇ ਸਮੇਂ ਤੋਂ ਲਿਖਦਾ ਆ ਰਿਹਾ ਹੈ। ਗੁਰਮੁਖੀ ਲਿਖਣ ਪਰੰਪਰਾ ਵੀ ਬਹੁਤ ਹੀ ਪੁਰਾਣੀ ਹੈ। ਗੁਰਮੁਖੀ ਸਮਰਾਟ ਅਸ਼ੋਕ ਦੇ ਵੇਲੇ ਦੇ ਸ਼ਿਲਾਲੇਖਾਂ ਚ ਅਤੇ ਅਗਰ ਏਸ ਤੋਂ ਵੀ ਪਹਿਲੇ ਜਾਈਏ ਤਾਂ ਮਹੋਂਜਦੜੋ ਸਭਿਅਤਾ ਦੇ ਨਾਲ ਵੀ ਸੰਬੰਧ ਮਿਲ ਜਾਂਦੇ ਨੇ। ਗੁਰਮੁਖੀ ਜਦੋਂ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਤੱਕ ਪਹੁੰਚੀ ਤਾਂ ਇਹ ਬਹੁਤ ਜਿਆਦਾ ਵਿਕਸਿਤ ਹੋ ਚੁੱਕੀ - ਪੁਰਾਣੇ ਪੰਡਿਤਾਂ ਵਿਦਵਾਨਾ ਨੇ ਬਹੁਤ ਮਹੀਨ ਖੋਜ ਤੇ ਮਿਹਨਤ ਨਾਲ ਏਸ ਨੂੰ ਵਿਕਸਿਤ ਤੇ ਸੰਪੂਰਨ ਕੀਤਾ।",
+      "ਪੁਰਾਣੇ ਸਮਿਆਂ ਚ ਅਗਰ ਕੋਈ ਕਿਤਾਬ ਲਿਖੀ ਜਾਂਦੀ ਤਾਂ ਹੁਣ ਵਾਂਗ ਛਾਪਾ ਨਾ ਹੋਣ ਕਰਕੇ ਲਿਖਾਰੀਆਂ ਨੂੰ ਏਹ ਕਾਰਜ ਦਿਤਾ ਜਾਂਦਾ ਸੀ। ਤੇ ਉਹ ਲਿਖਾਰੀ ਕਿਤਾਬਾਂ ਦੇ ਵੱਧ ਤੋ ਵੱਧ ਉਲੱਥੇ ਕਰਦੇ ਜਿਵੇ ਅੱਜਕੱਲ੍ਹ ਛਾਪੇ ਵਾਲੀ ਮਸ਼ੀਨ ਕਰਦੀ ਹੈ। ਉਹ ਲਿਖਾਰੀ ਆਪਣੀ ਕਲਾ ਚ ਨਿਪੁੰਨ ਹੁੰਦੇ ਸਨ - ਕੇਵਲ ਅਖਰਾਂ ਦਾ ਗਿਆਨ ਜਾਂ ਸੁੰਦਰ ਲਿਖਾਵਟ ਹੀ ਇਕ ਲਿਖਾਰੀ ਨਈ ਬਣਾ ਸਕਦੀ; ਉਸ ਲਈ ਇਕ ਸਾਰ ਲਿਖਣਾ, ਸਿਆਹੀ ਦੀ ਛਿੱਟ ਨਾ ਪੈਣ ਦੇਣਾ, ਕਾਗਜ਼ ਤੇ ਬੇਨਿਸ਼ਾਨ ਲੀਕਾਂ ਮਾਰਨੀਆਂ ਅਤੇ ਆਦਿ ਤੋ ਅੰਤ ਇਕੋ ਜਿਹਾ ਹਾਸ਼ੀਆ ਖਿੱਚ ਕੇ ਇਕਸਾਰਤਾ ਚ ਲਿਖਣਾ ਜਰੂਰੀ ਹੁੰਦਾ ਹੈ।",
+      "ਗੁਰਬਾਣੀ ਲਿਖਣ ਪਰੰਪਰਾ ਏਸ ਆਮ ਲਿਖਣ ਸ਼ੈਲੀ ਤੋ ਥੌੜੀ ਅੱਡਰੀ ਹੈ। ਪੁਰਾਣੀਆਂ ਬੀੜਾਂ ਦੇ ਅਧਿਐਨ ਨਾਲ ਏਹੁ ਪਰਤੱਖ ਹੁੰਦਾ ਹੈ ਕਿ ਪੁਰਾਤਨ ਲਿਖਾਰੀ ਕਿੰਨੇ ਸੂਝ ਬੂਝ ਵਾਲੇ ਸਨ। ਲਿਖਾਵਟ ਏਨੀ ਸੋਹਣੀ ਕਿ ਛਾਪੇ ਨੂੰ ਵੀ ਮਾਤ ਪੈਂਦੀ ਏ। ਗੁਰਬਾਣੀ ਦੀ ਲਿਖਾਈ ਦਾ ਵੱਡਾ ਨੁਕਤਾ ਹੈ ਉਸ ਵਿੱਚ ਵਿਆਕਰਣਕ ਦ੍ਰਿਸ਼ਟੀ ਤੋ ਮੁਕਤਾ ਸਿਹਾਰੀ ਔਂਕੜ ਕਿਥੇ ਕਿਥੇ ਵਰਤਨੇ ਨੇ। ਗੁਰੂ ਸਾਹਿਬ ਦੀ ਸਿਖਲਾਈ ਨੇ ਬਹੁਤੇ ਲਿਖਾਰੀਆਂ ਨੂੰ ਏਸ ਕਲਾ ਚ ਨਿਪੁੰਨ ਕੀਤਾ ਤਾਂ ਕਿ ਸ਼ਬਦ ਜੋੜ ਦਾ ਭੇਦ ਵਿਆਕਰਣ ਦੀ ਭਿੰਨਤਾ ਨਾਲ ਵਖਰਾ ਦਰਸਾਇਆ ਜਾ ਸਕੇ।",
+      "ਜਨਮਸਾਖੀਆਂ ਅਨੁਸਾਰ ਗੁਰੂ ਨਾਨਕ ਸਾਹਿਬ ਜੀ ਪਾਸ ਕਰਤਾਰਪੁਰ ਆ ਕੇ ਭਾਈ ਮਨਸੁਖ, ਭਾਈ ਭਗੀਰਥ, ਭਾਈ ਪੈੜਾ ਮੋਖਾ, ਭਾਈ ਹੱਸੂ ਲੁਹਾਰ, ਭਾਈ ਸ਼ੀਹਾਂ ਛੀਬਾਂ, ਭਾਈ ਸੈਦੋ ਘੇਉ - ਬਾਣੀ ਲਿਖਣ ਦਾ ਕਾਰਜ ਕਰਦੇ ਰਹੇ ਹਨ। ਅੱਗੋ ਇਹੁ ਪੋਥੀਆਂ ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ ਪਾਸ ਪਹੁੰਚੀਆਂ, ਫੇਰ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਇਹਨਾਂ ਦੀਆਂ ਅੱਗੋਂ ਨਕਲਾਂ ਕਰਵਾਈਆਂ। ਮੁੜ ਗੁਰੂ ਅਰਜੁਨ ਦੇਵ ਜੀ ਏਸ ਪਰੰਪਰਾ ਨੂੰ ਅੱਗੇ ਵਧਾਉਂਦੇ ਨੇ - ਭਾਈ ਗੁਰਦਾਸ ਜੀ ਨੂੰ ਲਿਖਾਰੀ ਥਾਪ ਕੇ ਆਦਿ ਬੀੜ ਦੀ ਰਚਨਾ ਕੀਤੀ ਜਿਸ ਵਿੱਚ ਸਾਰੇ ਗੁਰੂ ਸਾਹਿਬਾਨਾਂ, ਸ਼੍ਰੋਮਣੀ ਭਗਤਾਂ, ਭੱਟ ਸਾਹਿਬਾਨਾਂ ਅਤੇ ਪਿਆਰੇ ਗੁਰਸਿਖੜਿਆਂ ਦੀ ਬਾਣੀ ਸ਼ਾਮਿਲ ਹੈ। ਫੇਰ ਸ੍ਰੀ ਕਲਗੀਧਰ ਪਿਤਾ ਜੀ ਨੇ ਸੰਪੂਰਨ ਆਦਿ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੀ ਬਾਣੀ ਭਾਈ ਮਨੀ ਸਿੰਘ ਸ਼ਹੀਦ ਜੀ ਪਾਸੋਂ ਲੜੀਵਾਰ ਰੂਪ ਚ ਲਿਖਵਾਈ, ਅਤੇ ਉਸੇ ਬੀੜ ਨੂੰ ਨਾਂੜੇਦ ਵਿਖੇ ਗੁਰਿਆਈ ਦਾ ਤਿਲਕ ਦੇ ਕਰ ਸਿਖਾਂ ਨੂੰ ਗੁਰੂ ਕੇ ਲੜ ਲਾ ਕੇ ਸਚਖੰਡ ਪਿਆਨਾ ਕੀਤਾ।",
+      "ਮੁੜ ਉਸ ਤੋਂ ਉਪਰੰਤ ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ ਸ਼ਹੀਦ ਵਰਗੇ ਲਿਖਾਰੀਆਂ ਨੇ ਅਗਾਂਹ ਉਸ ਪਾਵਨ ਬੀੜ ਦੇ ਉਤਾਰੇ ਕੀਤੇ। ਸੇਵਪੰਥੀ, ਨਿਰਮਲੇ ਅਤੇ ਉਦਾਸੀਨ ਸੰਪਰਦਾਇ ਦੇ ਵਿਦਵਾਨਾਂ ਨੇ ਵੱਖੋ ਵੱਖੋ ਉਪਰਾਲੇ ਕੀਤੇ ਅਤੇ ਬੀੜ ਦੇ ਅਗਾਂਹ ਉਤਾਰੇ ਕੀਤੇ। ਏਸ ਉਤਾਰਿਆਂ ਚ ਬੀੜਾਂ ਦੇ ਅਕਾਰ, ਲਿਖਾਵਟ, ਹਾਸ਼ੀਏ, ਜਿਲਦ, ਪੱਤਰਿਆਂ ਦੀ ਗਿਣਤੀ ਸਬ ਅੱਡੋ ਅੱਡੋ ਵਿਸ਼ੇਸ਼ ਤੇ ਸੁੰਦਰ ਹਨ। ਅਸੀ ਅੱਜ ਵੀ ਉਹਨਾਂ ਵਿਚੋ ਕਈ ਬੀੜਾਂ ਦੇ ਦਰਸ਼ਨ ਕਰ ਸਕਦੇ ਆ।",
+      "ਫੇ ਉੰਨੀਵੀਂ ਸਦੀ ਦੇ ਆਖੀਰ ਚ ਅੰਗਰੇਜਾਂ ਦੇ ਰਾਜ ਸਮੇ ਪਹਿਲੀ ਬੀੜ ਛਾਪੇਖਾਨੇ ਚ ਛਪਦੀ ਹੈ। ਜਿਸ ਤੇ ਪੰਥ ਨੇ ਬਹੁਤ ਵਿਰੋਧ ਵੀ ਕੀਤਾ ਕਿਉਂਕਿ ਏਸ ਤੋ ਪਹਿਲਾ ਪੰਥ ਚ ਕੇਵਲ ਹਥਲਿਖਤ ਬੀੜਾਂ ਹੀ ਮੌਜੂਦ ਸਨ। ਪਰੰਤੂ ਸਮੇ ਦੀ ਢਿਲਿਆਈ ਨੇ ਛਾਪੇ ਖਾਨੇ ਦੀ ਮਾੜੀ ਪਿਰਤ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤੀ। ੧੯੦੦ ਤੋਂ ਬਾਅਦ ਬੀੜਾਂ ਦਾ ਛਪਣਾ ਬਹੁਤ ਹੀ ਆਮ ਹੋ ਗਿਆ। ਹੁਣ ਹਾਲ ਏਹੁ ਹੈ ਕਿ ਕੋਈ ਵੀ ਲਿਖਣ ਨੂੰ ਲੰਮੇਰਾ ਕਾਰਜ ਮੰਨ ਕੇ ਏਹੁ ਸੇਵਾ ਕਰਣੀ ਨਈ ਚਾਹ ਰਿਹਾ ਕਿਉਂਕਿ ਛਪਿਆ ਛਪਾਇਆ ਸਬ ਕੁਜ ਹਾਜ਼ਿਰ ਹੋ ਰਿਹਾ ਹੈ।",
+      "ਗੜ ਅਨੰਦ ਵੀ ਏਸੇ ਸਮੇਂ ਚ ਗੁਰਬਾਣੀ ਲਿਖਣ ਪਰੰਪਰਾ ਲਈ ਕਾਰਜ਼ਸ਼ੀਲ ਹੈ। ਤਕਰੀਬਨ ੨੦੧੮ ਈ ਤੋ ਵੱਖ ਵੱਖ ਸ਼ਹਿਰਾਂ ਚ ਕਾਰਜ਼ਸ਼ਾਲਾ ਲਗਾ ਕਰ ਸੰਗਤਿ ਚ ਏਸ ਲਿਖਣ ਪਰੰਪਰਾ ਦਾ ਪ੍ਰਚਾਰ ਪ੍ਰਸਾਰ ਕਰ ਰਹੀ ਹੈ। ਹਰ ਸਾਲ ਜਨਵਰੀ-ਫਰਵਰੀ ਚ ਵੱਡਾ ਸਾਲਾਨਾ ਕੈਂਪ \"ਕੈਂਪ ਲਿਖਾਰੀਆਂ\" ਦੇ ਨਾਮ ਹੇਠ ੨੦੨੦ ਤੋ ਹਰ ਸਾਲ ਲਗਾਇਆ ਜਾਂਦਾ ਹੈ ਜਿਸ ਵਿਚ ਬੱਚਿਆ ਨੂੰ ਗੁਰਬਾਣੀ ਲਿਖਣ ਪਰੰਪਰਾ ਦੇ ਨਾਲ-ਨਾਲ ਗੁਰਸਿਖ ਜੀਵਨ ਜਾਂਚ ਵੀ ਸਿਖਾਈ ਜਾਂਦੀ ਹੈ।",
+      "ਜਥੇਬੰਦਕ ਤੌਰ ਤੇ ਕੁਜ ਸੇਵਾਦਾਰ - ਵੀਰ ਇੰਦਰਜੀਤ ਸਿੰਘ ਜੀ (ਜਰਮਨੀ), ਭੈਣਜੀ ਇਸ਼ਮੀਨ ਕੌਰ ਜੀ (ਦਿੱਲੀ), ਭੈਣ ਨਿਤਜੱਪ ਕੌਰ ਜੀ (ਜਲੰਧਰ), ਭੈਣ ਦਿੱਵਿਆ ਕਲਵਾਣੀ ਜੀ (ਉਲਾਸਨਗਰ), ਵੀਰ ਕਮਲਦੀਪ ਸਿੰਘ ਜੀ (ਭੌਪਾਲ), ਵੀਰ ਅਜ਼ਾਦ ਕੰਬੋਜ - ਪੱਕੇ ਤੌਰ ਪਰ ਨਾਲ ਜੁੜ ਕੇ ਏਸ ਸੇਵਾ ਨੂੰ ਅੱਗੇ ਲੈ ਕੇ ਜਾ ਰਹੇ ਹਨ। ਗੜ ਅਨੰਦ ਨਾਲ ਤਕਰੀਬਨ ੩੦-੪੦ ਲਿਖਾਰੀ ਜੁੜੇ ਹਨ ਜੋ ਪੰਥ ਪਰਵਾਣਿਤ ਬੀੜ ਸਾਹਿਬ ਦੇ ਪੂਰਨ ਵਿਧਿ ਪੂਰਵਕ ਉਤਾਰੇ ਕਰ ਰਹੇ ਹਨ ਅਤੇ ੨੦੦ ਕੁ ਲਿਖਾਰੀ ਹਨ ਜੋ ਪੋਥੀਆਂ ਸਾਹਿਬ ਤੇ ਗੁਟਕੇ ਤਿਆਰ ਕਰ ਰਹੇ ਹਨ।",
+      "ਗੜ ਅਨੰਦ ਚ ਅਸੀ ਅਖਰਾਂ ਦੀ ਬਣਾਵਟ, ਅੱਖਰ ਜੋੜਣੇ, ਕਾਗਜ਼ ਤੇ ਲੀਕਾਂ ਮਾਰਨੀਆਂ, ਹਾਸ਼ੀਏ, ਹੜਤਾਲ, ਅਤੇ ਲਿਖਣ ਦੇ ਸਾਰੇ ਨੁਕਤੇ ਸਿਖਾਉਂਦੇ ਹਾਂ ਤਾਂ ਕਿ ਗੁਰਬਾਣੀ ਲਿਖਣ ਵੇਲੇ ਕਿਸੇ ਕਿਸਮ ਦੀ ਚੂਕ ਤੋ ਬਚਿਆ ਜਾ ਸਕੇ। ਜਿਤਨਾ ਚਿਰ ਇਕ ਵਿਦਿਆਰਥੀ ਚੰਗਾ ਲਿਖਣ ਯੋਗ ਨਈ ਹੋ ਜਾਂਦਾ ਤੇ ਸਾਰੇ ਨਿਯਮ ਪੱਕੇ ਨਈ ਕਰ ਲੈਂਦਾ, ਉਤਨਾ ਚਿਰ ਉਸ ਨੂੰ ਗੁਰਬਾਣੀ ਨਈ ਲਿਖਣ ਦਿਤੀ ਜਾਂਦੀ। ਸਾਰੇ ਲਿਖਾਰੀਆਂ ਨੂੰ ਕਾਗਜ਼, ਕਲਮਾਂ, ਸਿਆਹੀ, ਲਿਖਣ ਲਈ ਆਸਣ - ਸਬ ਸਮੱਗਰੀ ਮਹੁੱਈਆ ਕਰਵਾਂਦੇ ਹਾਂ। ਗੜ ਅਨੰਦ ਚ ਏਹੁ ਸਾਰਾ ਕਾਰਜ ਸਾਡੇ ਸੇਵਾਦਾਰਾਂ ਅਤੇ ਸੰਗਤਿ ਦੇ ਦਸਵੰਧ ਨਾਲ ਹੀ ਚੱਲ ਰਹੇ ਨੇ।"
+    ]
+  },
+  "HomeSeva": {
+    "eyebrow": "Seva — Selfless Contribution",
+    "title": "Support the Mission",
+    "description": "Your contribution enables us to host learning camps, preserve sacred manuscripts, and make traditional Sikh education accessible to all — freely and without condition.",
+    "choose_amount": "Choose an amount",
+    "other_amount": "Other",
+    "amount_placeholder": "Enter amount (₹)",
+    "monthly_label": "Monthly seva — sustain this work every month",
+    "bank_heading": "Bank transfer",
+    "account_name_label": "Account name",
+    "account_name_value": "Garh Anand Welfare Society",
+    "account_number_label": "Account number",
+    "account_number_value": "50200098923091",
+    "ifsc_label": "IFSC code",
+    "ifsc_value": "HDFC0001331",
+    "whatsapp_receipt": "Send your receipt on WhatsApp",
+    "qr_alt": "PhonePe QR code for donations to Garh Anand Welfare Society",
+    "submit": "Contribute with Seva",
+    "payment_note": "Secure payment · No account required · Cancel anytime",
+    "supports_heading": "Your seva supports",
+    "supports": [
+      "Hosting learning camps and retreats",
+      "Preserving and digitising Sikh manuscripts",
+      "Building accessible learning for all"
+    ],
+    "success_title": "Waheguru Meherbaan",
+    "success_message": "Your seva has been received with gratitude. This contribution supports the continuation of Larivaar learning for students across the world.",
+    "success_quote": "In the company of the holy, one finds the Naam.",
+    "success_quote_source": "Guru Granth Sahib",
+    "return": "Return"
+  },
+  "HomeFooter": {
+    "logo_alt": "GarhAnand logo",
+    "brand_name": "GarhAnand",
+    "description_1": "A sacred learning platform dedicated to the preservation and teaching of Larivaar Gurmukhi in the Sikh tradition.",
+    "description_2": "Reviving the forgotten traditions of the Khalsa Panth for a principle-driven future.",
+    "gurmukhi_line": "ਸਤਿਨਾਮੁਕਰਤਾਪੁਰਖੁ",
+    "contact_heading": "Get in Touch",
+    "follow_heading": "Follow",
+    "copyright": "© {year} GarhAnand. All rights reserved.",
+    "built_with_care": "Built with care for the Sikh tradition."
+  },
   "Index": {
     "meta_title": "Garah Anand | Sikh history and stories",
     "meta_description": "Garah Anand shares Sikh history and narratives in a calm, readable space — for study, reflection, and preservation.",
