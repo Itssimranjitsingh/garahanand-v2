@@ -58,25 +58,21 @@ export function HomeFooter() {
   return (
     <footer
       id="contact"
+      className="py-12 sm:py-16"
       style={{
         background: '#0A1E1E',
         borderTop: '1px solid rgba(194,163,107,0.10)',
-        padding: '64px 0 32px',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px' }}>
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div
+          className="mb-10 grid grid-cols-1 gap-8 sm:mb-14 sm:gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(180px,1fr)_minmax(120px,0.6fr)]"
           style={{
-            display: 'grid',
-            gridTemplateColumns:
-              'minmax(280px, 1.4fr) minmax(220px, 1fr) minmax(120px, 0.6fr)',
-            gap: 40,
             alignItems: 'start',
-            marginBottom: 56,
           }}
         >
           {/* Brand */}
-          <div>
+          <div className="min-w-0">
             <Image
               src="/assets/others/logo.png"
               alt="GarhAnand logo"
@@ -141,7 +137,7 @@ export function HomeFooter() {
             </div>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <div
               style={{
                 fontSize: 10,
@@ -170,10 +166,13 @@ export function HomeFooter() {
                   <a
                     href={item.href}
                     style={{
+                      display: 'inline-block',
                       fontSize: 13,
                       color: 'rgba(245,241,232,0.45)',
                       textDecoration: 'none',
                       transition: 'color 200ms ease',
+                      maxWidth: '100%',
+                      overflowWrap: 'anywhere',
                     }}
                     onMouseEnter={(e) =>
                       (e.currentTarget.style.color = 'rgba(245,241,232,0.8)')
@@ -189,7 +188,7 @@ export function HomeFooter() {
             </ul>
           </div>
 
-          <div>
+          <div className="min-w-0">
             <div
               style={{
                 fontSize: 10,
@@ -240,14 +239,9 @@ export function HomeFooter() {
 
         {/* Bottom bar */}
         <div
+          className="flex flex-col items-start justify-start gap-3 border-t pt-6 sm:flex-row sm:items-center sm:justify-between"
           style={{
-            borderTop: '1px solid rgba(194,163,107,0.10)',
-            paddingTop: 24,
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: 12,
+            borderColor: 'rgba(194,163,107,0.10)',
           }}
         >
           <div
@@ -260,11 +254,9 @@ export function HomeFooter() {
             © {new Date().getFullYear()} GarhAnand. All rights reserved.
           </div>
           <div
+            className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-4"
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              flexWrap: 'wrap',
-              gap: 16,
+              maxWidth: '100%',
             }}
           >
             <LocaleSwitcher tone="dark" />
