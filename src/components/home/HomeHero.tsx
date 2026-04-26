@@ -100,7 +100,9 @@ export function HomeHero() {
         >
           Return to the Unbroken
           <br />
-          <em style={{ fontStyle: 'italic', color: '#C2A36B', fontWeight: 300 }}>
+          <em
+            style={{ fontStyle: 'italic', color: '#C2A36B', fontWeight: 300 }}
+          >
             Word of the Guru
           </em>
         </h1>
@@ -133,7 +135,12 @@ export function HomeHero() {
         </p>
 
         <div
-          style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}
+          style={{
+            display: 'flex',
+            gap: 14,
+            justifyContent: 'center',
+            flexWrap: 'wrap',
+          }}
         >
           <a
             href="#learn"
@@ -151,12 +158,8 @@ export function HomeHero() {
               display: 'inline-block',
               transition: 'background 200ms ease',
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.background = '#8FBFAB')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = '#7FAF9B')
-            }
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#8FBFAB')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#7FAF9B')}
           >
             Begin Learning
           </a>

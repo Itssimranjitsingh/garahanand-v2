@@ -13,10 +13,7 @@ export function HomeSeva() {
 
   if (submitted) {
     return (
-      <section
-        id="seva"
-        style={{ background: '#EAE3D5', padding: '80px 0' }}
-      >
+      <section id="seva" style={{ background: '#EAE3D5', padding: '80px 0' }}>
         <div
           style={{
             maxWidth: 560,
@@ -135,9 +132,7 @@ export function HomeSeva() {
         padding: '80px 0',
       }}
     >
-      <div
-        style={{ maxWidth: 720, margin: '0 auto', padding: '0 32px' }}
-      >
+      <div style={{ maxWidth: 720, margin: '0 auto', padding: '0 32px' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <div
             style={{
@@ -201,19 +196,30 @@ export function HomeSeva() {
           </div>
 
           <div
-            style={{ display: 'flex', gap: 10, flexWrap: 'wrap', marginBottom: 16 }}
+            style={{
+              display: 'flex',
+              gap: 10,
+              flexWrap: 'wrap',
+              marginBottom: 16,
+            }}
           >
             {PRESETS.map((p) => (
               <button
                 key={p}
-                onClick={() => { setAmount(p); setCustom(''); }}
+                onClick={() => {
+                  setAmount(p);
+                  setCustom('');
+                }}
                 style={presetBtnStyle(amount === p && !custom)}
               >
                 ₹{p}
               </button>
             ))}
             <button
-              onClick={() => { setAmount('custom'); setCustom(''); }}
+              onClick={() => {
+                setAmount('custom');
+                setCustom('');
+              }}
               style={presetBtnStyle(amount === 'custom')}
             >
               Other
@@ -238,7 +244,9 @@ export function HomeSeva() {
                   outline: 'none',
                 }}
                 onFocus={(e) => (e.target.style.borderColor = '#C2A36B')}
-                onBlur={(e) => (e.target.style.borderColor = 'rgba(26,46,46,0.2)')}
+                onBlur={(e) =>
+                  (e.target.style.borderColor = 'rgba(26,46,46,0.2)')
+                }
               />
             </div>
           )}

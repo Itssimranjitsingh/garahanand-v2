@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
 
@@ -77,9 +77,7 @@ export function HomeNavbar() {
                 textDecoration: 'none',
                 transition: 'color 200ms ease',
               }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.color = '#F5F1E8')
-              }
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#F5F1E8')}
               onMouseLeave={(e) =>
                 (e.currentTarget.style.color = 'rgba(245,241,232,0.6)')
               }
@@ -106,12 +104,8 @@ export function HomeNavbar() {
               display: 'inline-block',
               transition: 'background 200ms ease',
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.background = '#8FBFAB')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = '#7FAF9B')
-            }
+            onMouseEnter={(e) => (e.currentTarget.style.background = '#8FBFAB')}
+            onMouseLeave={(e) => (e.currentTarget.style.background = '#7FAF9B')}
           >
             Seva
           </a>

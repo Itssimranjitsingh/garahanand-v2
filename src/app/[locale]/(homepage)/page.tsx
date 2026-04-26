@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { HomeNavbar } from '@/components/home/HomeNavbar';
+import { HomeCamps } from '@/components/home/HomeCamps';
+import { HomeFooter } from '@/components/home/HomeFooter';
 import { HomeHero } from '@/components/home/HomeHero';
 import { HomeLarivaar } from '@/components/home/HomeLarivaar';
-import { HomeCamps } from '@/components/home/HomeCamps';
-import { HomeTeacher } from '@/components/home/HomeTeacher';
+import { HomeNavbar } from '@/components/home/HomeNavbar';
 import { HomeSeva } from '@/components/home/HomeSeva';
-import { HomeFooter } from '@/components/home/HomeFooter';
+import { HomeTeacher } from '@/components/home/HomeTeacher';
 
 type Props = { params: Promise<{ locale: string }> };
 

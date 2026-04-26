@@ -4,10 +4,7 @@ const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
 
 export function HomeTeacher() {
   return (
-    <section
-      id="about"
-      style={{ background: '#EAE3D5', padding: '80px 0' }}
-    >
+    <section id="about" style={{ background: '#EAE3D5', padding: '80px 0' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px' }}>
         <div
           style={{
@@ -33,7 +30,11 @@ export function HomeTeacher() {
               alt="Jathedar Simranjeet Singh"
               fill
               sizes="(max-width: 768px) 100vw, 420px"
-              style={{ objectFit: 'cover', objectPosition: 'top', filter: 'saturate(0.85)' }}
+              style={{
+                objectFit: 'cover',
+                objectPosition: 'top',
+                filter: 'saturate(0.85)',
+              }}
             />
             <div
               style={{
@@ -105,8 +106,8 @@ export function HomeTeacher() {
             >
               Jathedar Simranjeet Singh has spent over thirty years studying
               Gurmukhi script and Gurbani in its original forms. Trained in the
-              classical Giani tradition, he brings scholarly rigour and spiritual
-              depth to every class.
+              classical Giani tradition, he brings scholarly rigour and
+              spiritual depth to every class.
             </p>
             <p
               style={{

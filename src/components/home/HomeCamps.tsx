@@ -135,7 +135,9 @@ export function HomeCamps() {
                   >
                     {c.location}
                   </span>
-                  <span style={{ fontSize: 10, color: 'rgba(194,163,107,0.5)' }}>
+                  <span
+                    style={{ fontSize: 10, color: 'rgba(194,163,107,0.5)' }}
+                  >
                     {c.year} · {c.days}
                   </span>
                 </div>

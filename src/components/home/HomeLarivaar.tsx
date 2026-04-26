@@ -115,10 +115,16 @@ export function HomeLarivaar() {
             marginBottom: 32,
           }}
         >
-          <button style={toggleBtn(isLarivaar)} onClick={() => setMode('larivaar')}>
+          <button
+            style={toggleBtn(isLarivaar)}
+            onClick={() => setMode('larivaar')}
+          >
             Larivaar
           </button>
-          <button style={toggleBtn(!isLarivaar)} onClick={() => setMode('padched')}>
+          <button
+            style={toggleBtn(!isLarivaar)}
+            onClick={() => setMode('padched')}
+          >
             Pad Ched
           </button>
         </div>
@@ -155,9 +161,7 @@ export function HomeLarivaar() {
                   borderRadius: 2,
                   padding: '2px 2px',
                   background:
-                    hoveredIdx === i
-                      ? 'rgba(194,163,107,0.22)'
-                      : 'transparent',
+                    hoveredIdx === i ? 'rgba(194,163,107,0.22)' : 'transparent',
                   transition: 'background 180ms ease',
                   cursor: 'default',
                   position: 'relative',
