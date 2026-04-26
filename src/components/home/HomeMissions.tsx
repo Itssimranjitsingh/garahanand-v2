@@ -1,23 +1,31 @@
+import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 
 const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
 
-const MISSIONS = [
-  {
-    image: '/assets/main/raagiji.jpeg',
-    title: 'Raag te Saaj',
-    description:
-      'Promoting the traditional way of Kirtan by teaching Guru ke Raag and Guru ke Saaj.',
-  },
-  {
-    image: '/assets/main/vidya.JPG',
-    title: 'Vidyalay',
-    description:
-      'Establishing a center to train Sikhs in Gatka, Santhia, Raag Vidya, and Akharkaari.',
-  },
-];
+type Mission = {
+  title: string;
+  description: string;
+};
 
-export function HomeMissions() {
+const MISSION_IMAGES = [
+  '/assets/main/raagiji.jpeg',
+  '/assets/main/vidya.JPG',
+] as const;
+
+export async function HomeMissions() {
+  const t = await getTranslations('HomeMissions');
+  const missions: Mission[] = [
+    {
+      title: t('missions.0.title'),
+      description: t('missions.0.description'),
+    },
+    {
+      title: t('missions.1.title'),
+      description: t('missions.1.description'),
+    },
+  ];
+
   return (
     <section
       id="missions"
@@ -45,7 +53,7 @@ export function HomeMissions() {
               marginBottom: 12,
             }}
           >
-            Upcoming Missions
+            {t('eyebrow')}
           </div>
           <h2
             style={{
@@ -58,7 +66,7 @@ export function HomeMissions() {
               marginBottom: 16,
             }}
           >
-            Expanding the Seva
+            {t('title')}
           </h2>
           <p
             style={{
@@ -68,9 +76,7 @@ export function HomeMissions() {
               margin: 0,
             }}
           >
-            Building dedicated spaces for learning, preserving sacred musical
-            traditions, and training the next generation in the disciplines of
-            the Panth.
+            {t('description')}
           </p>
         </div>
 
@@ -83,7 +89,7 @@ export function HomeMissions() {
             margin: '0 auto',
           }}
         >
-          {MISSIONS.map((mission) => (
+          {missions.map((mission, index) => (
             <article
               key={mission.title}
               style={{
@@ -102,7 +108,7 @@ export function HomeMissions() {
                 }}
               >
                 <Image
-                  src={mission.image}
+                  src={MISSION_IMAGES[index] ?? MISSION_IMAGES[0]}
                   alt={mission.title}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"

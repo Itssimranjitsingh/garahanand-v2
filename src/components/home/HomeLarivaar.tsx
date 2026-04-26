@@ -1,37 +1,21 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
 const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
 const FONT_GU = 'var(--font-noto-gurmukhi), sans-serif';
 
-const WORDS = [
-  { gu: 'ਸਤਿ', roman: 'Sati', meaning: 'Truth, the Eternal' },
-  { gu: 'ਨਾਮੁ', roman: 'Naamu', meaning: 'The Name' },
-  { gu: 'ਕਰਤਾ', roman: 'Kartaa', meaning: 'The Creator' },
-  { gu: 'ਪੁਰਖੁ', roman: 'Purakhu', meaning: 'The All-Pervading Being' },
-  { gu: 'ਨਿਰਭਉ', roman: 'Nirbhau', meaning: 'Without Fear' },
-  { gu: 'ਨਿਰਵੈਰੁ', roman: 'Nirvair', meaning: 'Without Enmity' },
-  { gu: 'ਅਕਾਲ', roman: 'Akaal', meaning: 'Beyond Time' },
-  { gu: 'ਮੂਰਤਿ', roman: 'Moorati', meaning: 'Embodiment' },
-  { gu: 'ਅਜੂਨੀ', roman: 'Ajooni', meaning: 'Beyond Birth & Death' },
-  { gu: 'ਸੈਭੰ', roman: 'Saibhan', meaning: 'Self-Illumined' },
-];
+type LarivaarWord = {
+  gurmukhi: string;
+  roman: string;
+  meaning: string;
+};
 
-const INFO_CARDS = [
-  {
-    title: 'Larivaar',
-    desc: 'Continuous, unbroken script as found in historical manuscripts and the original Guru Granth Sahib.',
-  },
-  {
-    title: 'Pad Ched',
-    desc: 'Modern word-separated form. Accessible but a departure from the original textual tradition.',
-  },
-  {
-    title: 'Hover to Learn',
-    desc: 'Pause on any word to see its transliteration and meaning. Learning through encounter, not memorisation.',
-  },
-];
+type InfoCard = {
+  title: string;
+  description: string;
+};
 
 const toggleBtn = (active: boolean) => ({
   fontSize: 12,
@@ -47,6 +31,73 @@ const toggleBtn = (active: boolean) => ({
 });
 
 export function HomeLarivaar() {
+  const t = useTranslations('HomeLarivaar');
+  const words: LarivaarWord[] = [
+    {
+      gurmukhi: t('words.0.gurmukhi'),
+      roman: t('words.0.roman'),
+      meaning: t('words.0.meaning'),
+    },
+    {
+      gurmukhi: t('words.1.gurmukhi'),
+      roman: t('words.1.roman'),
+      meaning: t('words.1.meaning'),
+    },
+    {
+      gurmukhi: t('words.2.gurmukhi'),
+      roman: t('words.2.roman'),
+      meaning: t('words.2.meaning'),
+    },
+    {
+      gurmukhi: t('words.3.gurmukhi'),
+      roman: t('words.3.roman'),
+      meaning: t('words.3.meaning'),
+    },
+    {
+      gurmukhi: t('words.4.gurmukhi'),
+      roman: t('words.4.roman'),
+      meaning: t('words.4.meaning'),
+    },
+    {
+      gurmukhi: t('words.5.gurmukhi'),
+      roman: t('words.5.roman'),
+      meaning: t('words.5.meaning'),
+    },
+    {
+      gurmukhi: t('words.6.gurmukhi'),
+      roman: t('words.6.roman'),
+      meaning: t('words.6.meaning'),
+    },
+    {
+      gurmukhi: t('words.7.gurmukhi'),
+      roman: t('words.7.roman'),
+      meaning: t('words.7.meaning'),
+    },
+    {
+      gurmukhi: t('words.8.gurmukhi'),
+      roman: t('words.8.roman'),
+      meaning: t('words.8.meaning'),
+    },
+    {
+      gurmukhi: t('words.9.gurmukhi'),
+      roman: t('words.9.roman'),
+      meaning: t('words.9.meaning'),
+    },
+  ];
+  const infoCards: InfoCard[] = [
+    {
+      title: t('cards.0.title'),
+      description: t('cards.0.description'),
+    },
+    {
+      title: t('cards.1.title'),
+      description: t('cards.1.description'),
+    },
+    {
+      title: t('cards.2.title'),
+      description: t('cards.2.description'),
+    },
+  ];
   const [mode, setMode] = useState<'larivaar' | 'padched'>('larivaar');
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
@@ -75,7 +126,7 @@ export function HomeLarivaar() {
               marginBottom: 12,
             }}
           >
-            Core Feature
+            {t('eyebrow')}
           </div>
           <h2
             style={{
@@ -88,7 +139,7 @@ export function HomeLarivaar() {
               marginBottom: 16,
             }}
           >
-            Experience Larivaar
+            {t('title')}
           </h2>
           <p
             style={{
@@ -98,9 +149,7 @@ export function HomeLarivaar() {
               maxWidth: 520,
             }}
           >
-            The Guru Granth Sahib was originally composed in continuous,
-            unspaced script. Toggle between Larivaar and Pad Ched to experience
-            both forms. Hover any word to reveal its meaning.
+            {t('description')}
           </p>
         </div>
 
@@ -122,7 +171,7 @@ export function HomeLarivaar() {
               setMode('larivaar');
             }}
           >
-            Larivaar
+            {t('larivaar_toggle')}
           </button>
           <button
             type="button"
@@ -131,7 +180,7 @@ export function HomeLarivaar() {
               setMode('padched');
             }}
           >
-            Pad Ched
+            {t('pad_ched_toggle')}
           </button>
         </div>
 
@@ -157,8 +206,8 @@ export function HomeLarivaar() {
               color: '#F5F1E8',
             }}
           >
-            {WORDS.map((w, i) => (
-              <span key={w.gu}>
+            {words.map((w, i) => (
+              <span key={w.gurmukhi}>
                 <span
                   onMouseEnter={() => {
                     setHoveredIdx(i);
@@ -179,7 +228,7 @@ export function HomeLarivaar() {
                     position: 'relative',
                   }}
                 >
-                  {w.gu}
+                  {w.gurmukhi}
                   {hoveredIdx === i && (
                     <span
                       style={{
@@ -229,7 +278,7 @@ export function HomeLarivaar() {
                     </span>
                   )}
                 </span>
-                {i < WORDS.length - 1 ? ' ' : null}
+                {i < words.length - 1 ? ' ' : null}
               </span>
             ))}
           </div>
@@ -243,7 +292,7 @@ export function HomeLarivaar() {
             textAlign: 'right',
           }}
         >
-          Mool Mantar — Guru Granth Sahib, Ang 1
+          {t('source')}
         </div>
 
         {/* Info cards */}
@@ -255,7 +304,7 @@ export function HomeLarivaar() {
             marginTop: 48,
           }}
         >
-          {INFO_CARDS.map((c) => (
+          {infoCards.map((c) => (
             <div
               key={c.title}
               style={{
@@ -283,7 +332,7 @@ export function HomeLarivaar() {
                   color: 'rgba(245,241,232,0.60)',
                 }}
               >
-                {c.desc}
+                {c.description}
               </div>
             </div>
           ))}

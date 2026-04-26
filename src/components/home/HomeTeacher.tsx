@@ -1,5 +1,6 @@
 'use client';
 
+import { useLocale, useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -7,20 +8,22 @@ const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
 const FONT_GU = 'var(--font-noto-gurmukhi), sans-serif';
 const TEACHER_IMAGE = '/assets/others/jathedar-simranjeet-singh.jpeg';
 
-const JATHEDAR_PARAGRAPHS = [
-  'ਸਤਿਗੁਰੁ ਸਚੇ ਪਾਤਿਸ਼ਾਹ ਨਿਰੰਕਾਰੀ ਜੋਤਿ ਗੁਰੂ ਨਾਨਕ ਸਾਹਿਬ ਜੀ ਨੇ ਸਮੁੱਚੀ ਮਾਨਵਤਾ ਤੇ ਉਧਾਰ ਲਈ ਜਨਮ ਧਾਰਿਆ। ਵੱਖ ਵੱਖ ਥਾਈਂ ਭਰਮਣ ਕਰਕੇ ਬੇਅੰਤ ਭਟਕਿਆ ਨੂੰ ਸਿੱਧੇ ਰਾਹ ਪਾਇਆ ਤੇ ਉਹਨਾਂ ਨੂੰ ਸਬਦ ਦੇ ਲੜ ਲਾਇਆ। ਜਨਮਸਾਖੀਆਂ ਅਨੁਸਾਰ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਜਿੱਥੇ ਬਾਬਾ ਮਰਦਾਨਾ ਜੀ ਨੂੰ ਆਖਦੇ ਕਿ "ਛੇੜ ਮਰਦਾਨਿਆ ਰਬਾਬ ਕਾਈ ਸਿਫਤ ਖ਼ੁਦਾ ਦੇ ਦੀਦਾਰ ਦੀ ਕਰੀਏ" ਅਤੇ ਉਸ ਅੰਮ੍ਰਿਤ ਰੂਪੀ ਬਾਣੀ ਨੂੰ ਮਾਣਦੇ ਤੇ ਬਾਬਾ ਮਰਦਾਨਾ ਜੀ ਨਾਲ ਰਬਾਬ ਦੀ ਧੁੰਨ ਵਿੱਚ ਉਸ ਦਾ ਕੀਰਤਨ ਕਰਦੇ, ਓਥੇ ਜਨਮਸਾਖੀ ਚ ਇਹੁ ਵੀ ਪੜ੍ਹੀਦਾ ਹੈ ਕਿ ਗੁਰੂ ਸਾਹਿਬ ਉਸ ਗਾਵੀ ਹੋਈ ਬਾਣੀ ਨੂੰ ਕਾਗਦੁ ਪਰ ਲਿਖ ਲੈਂਦੇ ਸਨ। ਸਾਖੀਆਂ ਸਾਖ ਭਰਦੀਆਂ ਨੇ ਕਿ ਜਦੋਂ ਉਦਾਸੀਆਂ ਵੇਲੇ ਤੁਰਦੇ ਤਾਂ ਵੱਡੇ ਬੇਬੇ ਜੀ ਬੇਬੇ ਨਾਨਕੀ ਜੀ ਉਹਨਾਂ ਨੂੰ ਸਿਆਹੀ ਦੀਆਂ ਵੱਟੀਆਂ ਬਣਾ ਕਰ ਨਾਲ ਦਿੰਦੇ ਜਿਨ੍ਹਾਂ ਨੂੰ ਲੋੜ ਅਨੁਸਾਰ ਜਲ ਲਗਾ ਕੇ ਉਸ ਵਿਚ ਲੇਖਣੀ/ਕਲਮ ਡੋਬ ਕਰ ਲਿਖਿਆ ਜਾ ਸਕਦਾ ਸੀ। ਸੋ ਏਥੋ ਹੀ ਗੁਰਬਾਣੀ ਲਿਖਣ ਪਰੰਪਰਾ ਦਾ ਮੁੱਢ ਬੱਝਦਾ ਹੈ ਜੋ ਗੁਰੂ ਪਿਤਾ ਜੀ ਨੇ ਆਪ ਏਸ ਦੀ ਆਰੰਭਤਾ ਕੀਤੀ।',
-  'ਹੱਥ ਲਿਖਤ ਦਾ ਇਤਿਹਾਸ ਬਹੁਤ ਪੁਰਾਣਾ ਹੈ। ਮਨੁੱਖ ਬਹੁਤ ਲੰਮੇ ਸਮੇਂ ਤੋਂ ਲਿਖਦਾ ਆ ਰਿਹਾ ਹੈ। ਗੁਰਮੁਖੀ ਲਿਖਣ ਪਰੰਪਰਾ ਵੀ ਬਹੁਤ ਹੀ ਪੁਰਾਣੀ ਹੈ। ਗੁਰਮੁਖੀ ਸਮਰਾਟ ਅਸ਼ੋਕ ਦੇ ਵੇਲੇ ਦੇ ਸ਼ਿਲਾਲੇਖਾਂ ਚ ਅਤੇ ਅਗਰ ਏਸ ਤੋਂ ਵੀ ਪਹਿਲੇ ਜਾਈਏ ਤਾਂ ਮਹੋਂਜਦੜੋ ਸਭਿਅਤਾ ਦੇ ਨਾਲ ਵੀ ਸੰਬੰਧ ਮਿਲ ਜਾਂਦੇ ਨੇ। ਗੁਰਮੁਖੀ ਜਦੋਂ ਗੁਰੂ ਸਾਹਿਬ ਜੀ ਤੱਕ ਪਹੁੰਚੀ ਤਾਂ ਇਹ ਬਹੁਤ ਜਿਆਦਾ ਵਿਕਸਿਤ ਹੋ ਚੁੱਕੀ - ਪੁਰਾਣੇ ਪੰਡਿਤਾਂ ਵਿਦਵਾਨਾ ਨੇ ਬਹੁਤ ਮਹੀਨ ਖੋਜ ਤੇ ਮਿਹਨਤ ਨਾਲ ਏਸ ਨੂੰ ਵਿਕਸਿਤ ਤੇ ਸੰਪੂਰਨ ਕੀਤਾ।',
-  'ਪੁਰਾਣੇ ਸਮਿਆਂ ਚ ਅਗਰ ਕੋਈ ਕਿਤਾਬ ਲਿਖੀ ਜਾਂਦੀ ਤਾਂ ਹੁਣ ਵਾਂਗ ਛਾਪਾ ਨਾ ਹੋਣ ਕਰਕੇ ਲਿਖਾਰੀਆਂ ਨੂੰ ਏਹ ਕਾਰਜ ਦਿਤਾ ਜਾਂਦਾ ਸੀ। ਤੇ ਉਹ ਲਿਖਾਰੀ ਕਿਤਾਬਾਂ ਦੇ ਵੱਧ ਤੋ ਵੱਧ ਉਲੱਥੇ ਕਰਦੇ ਜਿਵੇ ਅੱਜਕੱਲ੍ਹ ਛਾਪੇ ਵਾਲੀ ਮਸ਼ੀਨ ਕਰਦੀ ਹੈ। ਉਹ ਲਿਖਾਰੀ ਆਪਣੀ ਕਲਾ ਚ ਨਿਪੁੰਨ ਹੁੰਦੇ ਸਨ - ਕੇਵਲ ਅਖਰਾਂ ਦਾ ਗਿਆਨ ਜਾਂ ਸੁੰਦਰ ਲਿਖਾਵਟ ਹੀ ਇਕ ਲਿਖਾਰੀ ਨਈ ਬਣਾ ਸਕਦੀ; ਉਸ ਲਈ ਇਕ ਸਾਰ ਲਿਖਣਾ, ਸਿਆਹੀ ਦੀ ਛਿੱਟ ਨਾ ਪੈਣ ਦੇਣਾ, ਕਾਗਜ਼ ਤੇ ਬੇਨਿਸ਼ਾਨ ਲੀਕਾਂ ਮਾਰਨੀਆਂ ਅਤੇ ਆਦਿ ਤੋ ਅੰਤ ਇਕੋ ਜਿਹਾ ਹਾਸ਼ੀਆ ਖਿੱਚ ਕੇ ਇਕਸਾਰਤਾ ਚ ਲਿਖਣਾ ਜਰੂਰੀ ਹੁੰਦਾ ਹੈ।',
-  'ਗੁਰਬਾਣੀ ਲਿਖਣ ਪਰੰਪਰਾ ਏਸ ਆਮ ਲਿਖਣ ਸ਼ੈਲੀ ਤੋ ਥੌੜੀ ਅੱਡਰੀ ਹੈ। ਪੁਰਾਣੀਆਂ ਬੀੜਾਂ ਦੇ ਅਧਿਐਨ ਨਾਲ ਏਹੁ ਪਰਤੱਖ ਹੁੰਦਾ ਹੈ ਕਿ ਪੁਰਾਤਨ ਲਿਖਾਰੀ ਕਿੰਨੇ ਸੂਝ ਬੂਝ ਵਾਲੇ ਸਨ। ਲਿਖਾਵਟ ਏਨੀ ਸੋਹਣੀ ਕਿ ਛਾਪੇ ਨੂੰ ਵੀ ਮਾਤ ਪੈਂਦੀ ਏ। ਗੁਰਬਾਣੀ ਦੀ ਲਿਖਾਈ ਦਾ ਵੱਡਾ ਨੁਕਤਾ ਹੈ ਉਸ ਵਿੱਚ ਵਿਆਕਰਣਕ ਦ੍ਰਿਸ਼ਟੀ ਤੋ ਮੁਕਤਾ ਸਿਹਾਰੀ ਔਂਕੜ ਕਿਥੇ ਕਿਥੇ ਵਰਤਨੇ ਨੇ। ਗੁਰੂ ਸਾਹਿਬ ਦੀ ਸਿਖਲਾਈ ਨੇ ਬਹੁਤੇ ਲਿਖਾਰੀਆਂ ਨੂੰ ਏਸ ਕਲਾ ਚ ਨਿਪੁੰਨ ਕੀਤਾ ਤਾਂ ਕਿ ਸ਼ਬਦ ਜੋੜ ਦਾ ਭੇਦ ਵਿਆਕਰਣ ਦੀ ਭਿੰਨਤਾ ਨਾਲ ਵਖਰਾ ਦਰਸਾਇਆ ਜਾ ਸਕੇ।',
-  'ਜਨਮਸਾਖੀਆਂ ਅਨੁਸਾਰ ਗੁਰੂ ਨਾਨਕ ਸਾਹਿਬ ਜੀ ਪਾਸ ਕਰਤਾਰਪੁਰ ਆ ਕੇ ਭਾਈ ਮਨਸੁਖ, ਭਾਈ ਭਗੀਰਥ, ਭਾਈ ਪੈੜਾ ਮੋਖਾ, ਭਾਈ ਹੱਸੂ ਲੁਹਾਰ, ਭਾਈ ਸ਼ੀਹਾਂ ਛੀਬਾਂ, ਭਾਈ ਸੈਦੋ ਘੇਉ - ਬਾਣੀ ਲਿਖਣ ਦਾ ਕਾਰਜ ਕਰਦੇ ਰਹੇ ਹਨ। ਅੱਗੋ ਇਹੁ ਪੋਥੀਆਂ ਗੁਰੂ ਅੰਗਦ ਦੇਵ ਜੀ ਪਾਸ ਪਹੁੰਚੀਆਂ, ਫੇਰ ਗੁਰੂ ਅਮਰਦਾਸ ਜੀ ਨੇ ਇਹਨਾਂ ਦੀਆਂ ਅੱਗੋਂ ਨਕਲਾਂ ਕਰਵਾਈਆਂ। ਮੁੜ ਗੁਰੂ ਅਰਜੁਨ ਦੇਵ ਜੀ ਏਸ ਪਰੰਪਰਾ ਨੂੰ ਅੱਗੇ ਵਧਾਉਂਦੇ ਨੇ - ਭਾਈ ਗੁਰਦਾਸ ਜੀ ਨੂੰ ਲਿਖਾਰੀ ਥਾਪ ਕੇ ਆਦਿ ਬੀੜ ਦੀ ਰਚਨਾ ਕੀਤੀ ਜਿਸ ਵਿੱਚ ਸਾਰੇ ਗੁਰੂ ਸਾਹਿਬਾਨਾਂ, ਸ਼੍ਰੋਮਣੀ ਭਗਤਾਂ, ਭੱਟ ਸਾਹਿਬਾਨਾਂ ਅਤੇ ਪਿਆਰੇ ਗੁਰਸਿਖੜਿਆਂ ਦੀ ਬਾਣੀ ਸ਼ਾਮਿਲ ਹੈ। ਫੇਰ ਸ੍ਰੀ ਕਲਗੀਧਰ ਪਿਤਾ ਜੀ ਨੇ ਸੰਪੂਰਨ ਆਦਿ ਸ੍ਰੀ ਗੁਰੂ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ ਦੀ ਬਾਣੀ ਭਾਈ ਮਨੀ ਸਿੰਘ ਸ਼ਹੀਦ ਜੀ ਪਾਸੋਂ ਲੜੀਵਾਰ ਰੂਪ ਚ ਲਿਖਵਾਈ, ਅਤੇ ਉਸੇ ਬੀੜ ਨੂੰ ਨਾਂੜੇਦ ਵਿਖੇ ਗੁਰਿਆਈ ਦਾ ਤਿਲਕ ਦੇ ਕਰ ਸਿਖਾਂ ਨੂੰ ਗੁਰੂ ਕੇ ਲੜ ਲਾ ਕੇ ਸਚਖੰਡ ਪਿਆਨਾ ਕੀਤਾ।',
-  'ਮੁੜ ਉਸ ਤੋਂ ਉਪਰੰਤ ਬਾਬਾ ਦੀਪ ਸਿੰਘ ਜੀ ਸ਼ਹੀਦ ਵਰਗੇ ਲਿਖਾਰੀਆਂ ਨੇ ਅਗਾਂਹ ਉਸ ਪਾਵਨ ਬੀੜ ਦੇ ਉਤਾਰੇ ਕੀਤੇ। ਸੇਵਪੰਥੀ, ਨਿਰਮਲੇ ਅਤੇ ਉਦਾਸੀਨ ਸੰਪਰਦਾਇ ਦੇ ਵਿਦਵਾਨਾਂ ਨੇ ਵੱਖੋ ਵੱਖੋ ਉਪਰਾਲੇ ਕੀਤੇ ਅਤੇ ਬੀੜ ਦੇ ਅਗਾਂਹ ਉਤਾਰੇ ਕੀਤੇ। ਏਸ ਉਤਾਰਿਆਂ ਚ ਬੀੜਾਂ ਦੇ ਅਕਾਰ, ਲਿਖਾਵਟ, ਹਾਸ਼ੀਏ, ਜਿਲਦ, ਪੱਤਰਿਆਂ ਦੀ ਗਿਣਤੀ ਸਬ ਅੱਡੋ ਅੱਡੋ ਵਿਸ਼ੇਸ਼ ਤੇ ਸੁੰਦਰ ਹਨ। ਅਸੀ ਅੱਜ ਵੀ ਉਹਨਾਂ ਵਿਚੋ ਕਈ ਬੀੜਾਂ ਦੇ ਦਰਸ਼ਨ ਕਰ ਸਕਦੇ ਆ।',
-  'ਫੇ ਉੰਨੀਵੀਂ ਸਦੀ ਦੇ ਆਖੀਰ ਚ ਅੰਗਰੇਜਾਂ ਦੇ ਰਾਜ ਸਮੇ ਪਹਿਲੀ ਬੀੜ ਛਾਪੇਖਾਨੇ ਚ ਛਪਦੀ ਹੈ। ਜਿਸ ਤੇ ਪੰਥ ਨੇ ਬਹੁਤ ਵਿਰੋਧ ਵੀ ਕੀਤਾ ਕਿਉਂਕਿ ਏਸ ਤੋ ਪਹਿਲਾ ਪੰਥ ਚ ਕੇਵਲ ਹਥਲਿਖਤ ਬੀੜਾਂ ਹੀ ਮੌਜੂਦ ਸਨ। ਪਰੰਤੂ ਸਮੇ ਦੀ ਢਿਲਿਆਈ ਨੇ ਛਾਪੇ ਖਾਨੇ ਦੀ ਮਾੜੀ ਪਿਰਤ ਸ਼ੁਰੂ ਕਰ ਦਿੱਤੀ। ੧੯੦੦ ਤੋਂ ਬਾਅਦ ਬੀੜਾਂ ਦਾ ਛਪਣਾ ਬਹੁਤ ਹੀ ਆਮ ਹੋ ਗਿਆ। ਹੁਣ ਹਾਲ ਏਹੁ ਹੈ ਕਿ ਕੋਈ ਵੀ ਲਿਖਣ ਨੂੰ ਲੰਮੇਰਾ ਕਾਰਜ ਮੰਨ ਕੇ ਏਹੁ ਸੇਵਾ ਕਰਣੀ ਨਈ ਚਾਹ ਰਿਹਾ ਕਿਉਂਕਿ ਛਪਿਆ ਛਪਾਇਆ ਸਬ ਕੁਜ ਹਾਜ਼ਿਰ ਹੋ ਰਿਹਾ ਹੈ।',
-  'ਗੜ ਅਨੰਦ ਵੀ ਏਸੇ ਸਮੇਂ ਚ ਗੁਰਬਾਣੀ ਲਿਖਣ ਪਰੰਪਰਾ ਲਈ ਕਾਰਜ਼ਸ਼ੀਲ ਹੈ। ਤਕਰੀਬਨ ੨੦੧੮ ਈ ਤੋ ਵੱਖ ਵੱਖ ਸ਼ਹਿਰਾਂ ਚ ਕਾਰਜ਼ਸ਼ਾਲਾ ਲਗਾ ਕਰ ਸੰਗਤਿ ਚ ਏਸ ਲਿਖਣ ਪਰੰਪਰਾ ਦਾ ਪ੍ਰਚਾਰ ਪ੍ਰਸਾਰ ਕਰ ਰਹੀ ਹੈ। ਹਰ ਸਾਲ ਜਨਵਰੀ-ਫਰਵਰੀ ਚ ਵੱਡਾ ਸਾਲਾਨਾ ਕੈਂਪ "ਕੈਂਪ ਲਿਖਾਰੀਆਂ" ਦੇ ਨਾਮ ਹੇਠ ੨੦੨੦ ਤੋ ਹਰ ਸਾਲ ਲਗਾਇਆ ਜਾਂਦਾ ਹੈ ਜਿਸ ਵਿਚ ਬੱਚਿਆ ਨੂੰ ਗੁਰਬਾਣੀ ਲਿਖਣ ਪਰੰਪਰਾ ਦੇ ਨਾਲ-ਨਾਲ ਗੁਰਸਿਖ ਜੀਵਨ ਜਾਂਚ ਵੀ ਸਿਖਾਈ ਜਾਂਦੀ ਹੈ।',
-  'ਜਥੇਬੰਦਕ ਤੌਰ ਤੇ ਕੁਜ ਸੇਵਾਦਾਰ - ਵੀਰ ਇੰਦਰਜੀਤ ਸਿੰਘ ਜੀ (ਜਰਮਨੀ), ਭੈਣਜੀ ਇਸ਼ਮੀਨ ਕੌਰ ਜੀ (ਦਿੱਲੀ), ਭੈਣ ਨਿਤਜੱਪ ਕੌਰ ਜੀ (ਜਲੰਧਰ), ਭੈਣ ਦਿੱਵਿਆ ਕਲਵਾਣੀ ਜੀ (ਉਲਾਸਨਗਰ), ਵੀਰ ਕਮਲਦੀਪ ਸਿੰਘ ਜੀ (ਭੌਪਾਲ), ਵੀਰ ਅਜ਼ਾਦ ਕੰਬੋਜ - ਪੱਕੇ ਤੌਰ ਪਰ ਨਾਲ ਜੁੜ ਕੇ ਏਸ ਸੇਵਾ ਨੂੰ ਅੱਗੇ ਲੈ ਕੇ ਜਾ ਰਹੇ ਹਨ। ਗੜ ਅਨੰਦ ਨਾਲ ਤਕਰੀਬਨ ੩੦-੪੦ ਲਿਖਾਰੀ ਜੁੜੇ ਹਨ ਜੋ ਪੰਥ ਪਰਵਾਣਿਤ ਬੀੜ ਸਾਹਿਬ ਦੇ ਪੂਰਨ ਵਿਧਿ ਪੂਰਵਕ ਉਤਾਰੇ ਕਰ ਰਹੇ ਹਨ ਅਤੇ ੨੦੦ ਕੁ ਲਿਖਾਰੀ ਹਨ ਜੋ ਪੋਥੀਆਂ ਸਾਹਿਬ ਤੇ ਗੁਟਕੇ ਤਿਆਰ ਕਰ ਰਹੇ ਹਨ।',
-  'ਗੜ ਅਨੰਦ ਚ ਅਸੀ ਅਖਰਾਂ ਦੀ ਬਣਾਵਟ, ਅੱਖਰ ਜੋੜਣੇ, ਕਾਗਜ਼ ਤੇ ਲੀਕਾਂ ਮਾਰਨੀਆਂ, ਹਾਸ਼ੀਏ, ਹੜਤਾਲ, ਅਤੇ ਲਿਖਣ ਦੇ ਸਾਰੇ ਨੁਕਤੇ ਸਿਖਾਉਂਦੇ ਹਾਂ ਤਾਂ ਕਿ ਗੁਰਬਾਣੀ ਲਿਖਣ ਵੇਲੇ ਕਿਸੇ ਕਿਸਮ ਦੀ ਚੂਕ ਤੋ ਬਚਿਆ ਜਾ ਸਕੇ। ਜਿਤਨਾ ਚਿਰ ਇਕ ਵਿਦਿਆਰਥੀ ਚੰਗਾ ਲਿਖਣ ਯੋਗ ਨਈ ਹੋ ਜਾਂਦਾ ਤੇ ਸਾਰੇ ਨਿਯਮ ਪੱਕੇ ਨਈ ਕਰ ਲੈਂਦਾ, ਉਤਨਾ ਚਿਰ ਉਸ ਨੂੰ ਗੁਰਬਾਣੀ ਨਈ ਲਿਖਣ ਦਿਤੀ ਜਾਂਦੀ। ਸਾਰੇ ਲਿਖਾਰੀਆਂ ਨੂੰ ਕਾਗਜ਼, ਕਲਮਾਂ, ਸਿਆਹੀ, ਲਿਖਣ ਲਈ ਆਸਣ - ਸਬ ਸਮੱਗਰੀ ਮਹੁੱਈਆ ਕਰਵਾਂਦੇ ਹਾਂ। ਗੜ ਅਨੰਦ ਚ ਏਹੁ ਸਾਰਾ ਕਾਰਜ ਸਾਡੇ ਸੇਵਾਦਾਰਾਂ ਅਤੇ ਸੰਗਤਿ ਦੇ ਦਸਵੰਧ ਨਾਲ ਹੀ ਚੱਲ ਰਹੇ ਨੇ।',
-];
-
 export function HomeTeacher() {
+  const locale = useLocale();
+  const t = useTranslations('HomeTeacher');
+  const letterParagraphs = [
+    t('letter_paragraphs.0'),
+    t('letter_paragraphs.1'),
+    t('letter_paragraphs.2'),
+    t('letter_paragraphs.3'),
+    t('letter_paragraphs.4'),
+    t('letter_paragraphs.5'),
+    t('letter_paragraphs.6'),
+    t('letter_paragraphs.7'),
+    t('letter_paragraphs.8'),
+    t('letter_paragraphs.9'),
+  ];
+  const openingVerseLines = t('opening_verse').split('\n');
   const [isWisdomOpen, setIsWisdomOpen] = useState(false);
 
   return (
@@ -54,7 +57,7 @@ export function HomeTeacher() {
           >
             <Image
               src={TEACHER_IMAGE}
-              alt="Jathedar Simranjeet Singh"
+              alt={t('image_alt')}
               fill
               sizes="(max-width: 768px) 100vw, 420px"
               style={{
@@ -82,7 +85,7 @@ export function HomeTeacher() {
                   lineHeight: 1.7,
                 }}
               >
-                ਸਿਮਰਨਜੀਤ ਸਿੰਘ
+                {t('name')}
               </div>
               <div
                 style={{
@@ -92,7 +95,7 @@ export function HomeTeacher() {
                   marginTop: 4,
                 }}
               >
-                ਗੁਰੂ ਗ੍ਰੰਥ ਜੀ ਗੁਰੂ ਪੰਥ ਜੀ ਅਤੇ ਸਾਧਸੰਗਤਿ ਦਾ ਗੋਲਾ
+                {t('role')}
               </div>
             </div>
           </div>
@@ -109,7 +112,7 @@ export function HomeTeacher() {
                 marginBottom: 12,
               }}
             >
-              Our Guiding Light
+              {t('eyebrow')}
             </div>
             <h2
               style={{
@@ -122,10 +125,10 @@ export function HomeTeacher() {
                 marginBottom: 20,
               }}
             >
-              Words from Jathedar Ji
+              {t('title')}
             </h2>
             <p
-              lang="pa"
+              lang={locale}
               style={{
                 fontFamily: FONT_GU,
                 fontSize: 15,
@@ -134,12 +137,15 @@ export function HomeTeacher() {
                 marginBottom: 16,
               }}
             >
-              ਧੰਨੁ ਸੁ ਕਾਗਦੁ ਕਲਮ ਧੰਨੁ ਧਨੁ ਭਾਂਡਾ ਧਨੁ ਮਸੁ ॥
-              <br />
-              ਧਨੁ ਲੇਖਾਰੀ ਨਾਨਕਾ ਜਿਨਿ ਨਾਮੁ ਲਿਖਾਇਆ ਸਚੁ ॥੧॥
+              {openingVerseLines.map((line, index) => (
+                <span key={line}>
+                  {index > 0 ? <br /> : null}
+                  {line}
+                </span>
+              ))}
             </p>
             <p
-              lang="pa"
+              lang={locale}
               style={{
                 fontFamily: FONT_GU,
                 fontSize: 15,
@@ -150,9 +156,7 @@ export function HomeTeacher() {
                 overflow: 'hidden',
               }}
             >
-              ਸਤਿਗੁਰੁ ਸਚੇ ਪਾਤਿਸ਼ਾਹ ਨਿਰੰਕਾਰੀ ਜੋਤਿ ਗੁਰੂ ਨਾਨਕ ਸਾਹਿਬ ਜੀ ਨੇ ਸਮੁੱਚੀ ਮਾਨਵਤਾ ਤੇ ਉਧਾਰ
-              ਲਈ ਜਨਮ ਧਾਰਿਆ। ਵੱਖ ਵੱਖ ਥਾਈਂ ਭਰਮਣ ਕਰਕੇ ਬੇਅੰਤ ਭਟਕਿਆ ਨੂੰ ਸਿੱਧੇ ਰਾਹ ਪਾਇਆ ਤੇ ਉਹਨਾਂ ਨੂੰ
-              ਸਬਦ ਦੇ ਲੜ ਲਾਇਆ।
+              {t('excerpt')}
             </p>
 
             <div
@@ -170,9 +174,9 @@ export function HomeTeacher() {
                   color: '#1A2E2E',
                   marginBottom: 10,
                 }}
-                lang="pa"
+                lang={locale}
               >
-                ਕਹਤੇ ਪਵਿਤ੍ਰ ਸੁਣਤੇ ਸਭਿ ਧੰਨੁ ਲਿਖਤੀਂ ਕੁਲੁ ਤਾਰਿਆ ਜੀਉ ॥
+                {t('pull_quote')}
               </blockquote>
               <div
                 style={{
@@ -182,7 +186,7 @@ export function HomeTeacher() {
                   color: 'rgba(194,163,107,0.8)',
                 }}
               >
-                ਹੱਥਾਂ ਨਾਲ ਗੁਰਬਾਣੀ ਲਿਖਿਆ ਹੱਥ ਪਵਿੱਤਰ ਹੁੰਦੇ ਨੇ।
+                {t('pull_quote_caption')}
               </div>
             </div>
 
@@ -213,7 +217,7 @@ export function HomeTeacher() {
                 e.currentTarget.style.borderColor = '#1A2E2E';
               }}
             >
-              Read complete letter
+              {t('read_complete_letter')}
             </button>
           </div>
         </div>
@@ -236,7 +240,7 @@ export function HomeTeacher() {
         >
           <button
             type="button"
-            aria-label="Close Jathedar Ji letter"
+            aria-label={t('close_letter_aria')}
             onClick={() => {
               setIsWisdomOpen(false);
             }}
@@ -266,7 +270,7 @@ export function HomeTeacher() {
             >
               <Image
                 src={TEACHER_IMAGE}
-                alt="Jathedar Simranjeet Singh"
+                alt={t('image_alt')}
                 fill
                 sizes="(max-width: 768px) 100vw, 38vw"
                 style={{
@@ -311,7 +315,7 @@ export function HomeTeacher() {
                       marginBottom: 10,
                     }}
                   >
-                    Our Guiding Light
+                    {t('eyebrow')}
                   </div>
                   <h3
                     id="jathedar-modal-title"
@@ -325,10 +329,10 @@ export function HomeTeacher() {
                       margin: 0,
                     }}
                   >
-                    Words from Jathedar Ji
+                    {t('title')}
                   </h3>
                   <p
-                    lang="pa"
+                    lang={locale}
                     style={{
                       fontFamily: FONT_GU,
                       color: '#C2A36B',
@@ -339,7 +343,7 @@ export function HomeTeacher() {
                       marginTop: 8,
                     }}
                   >
-                    ਸਿਮਰਨਜੀਤ ਸਿੰਘ
+                    {t('name')}
                   </p>
                 </div>
 
@@ -361,12 +365,12 @@ export function HomeTeacher() {
                     textTransform: 'uppercase',
                   }}
                 >
-                  Close
+                  {t('close_letter')}
                 </button>
               </div>
 
               <div
-                lang="pa"
+                lang={locale}
                 style={{
                   color: 'rgba(26,46,46,0.82)',
                   fontFamily: FONT_GU,
@@ -384,12 +388,15 @@ export function HomeTeacher() {
                     paddingLeft: 18,
                   }}
                 >
-                  ਧੰਨੁ ਸੁ ਕਾਗਦੁ ਕਲਮ ਧੰਨੁ ਧਨੁ ਭਾਂਡਾ ਧਨੁ ਮਸੁ ॥
-                  <br />
-                  ਧਨੁ ਲੇਖਾਰੀ ਨਾਨਕਾ ਜਿਨਿ ਨਾਮੁ ਲਿਖਾਇਆ ਸਚੁ ॥੧॥
+                  {openingVerseLines.map((line, index) => (
+                    <span key={line}>
+                      {index > 0 ? <br /> : null}
+                      {line}
+                    </span>
+                  ))}
                 </p>
 
-                {JATHEDAR_PARAGRAPHS.slice(0, 7).map((paragraph) => (
+                {letterParagraphs.slice(0, 7).map((paragraph) => (
                   <p key={paragraph} style={{ margin: '0 0 22px' }}>
                     {paragraph}
                   </p>
@@ -409,7 +416,7 @@ export function HomeTeacher() {
                       margin: '0 0 8px',
                     }}
                   >
-                    ਕਹਤੇ ਪਵਿਤ੍ਰ ਸੁਣਤੇ ਸਭਿ ਧੰਨੁ ਲਿਖਤੀਂ ਕੁਲੁ ਤਾਰਿਆ ਜੀਉ ॥
+                    {t('pull_quote')}
                   </p>
                   <p
                     style={{
@@ -418,12 +425,11 @@ export function HomeTeacher() {
                       margin: 0,
                     }}
                   >
-                    ਹੱਥਾਂ ਨਾਲ ਗੁਰਬਾਣੀ ਲਿਖਿਆ ਹੱਥ ਪਵਿੱਤਰ ਹੁੰਦੇ ਨੇ। ਜੀਵਨ ਚ ਸਹਿਜ ਆਉਂਦਾ ਹੈ। ਗੁਰੂ
-                    ਪ੍ਰਤੀ ਪ੍ਰੇਮ ਵੱਧਦਾ ਹੈ।
+                    {t('reflection')}
                   </p>
                 </div>
 
-                {JATHEDAR_PARAGRAPHS.slice(7).map((paragraph) => (
+                {letterParagraphs.slice(7).map((paragraph) => (
                   <p key={paragraph} style={{ margin: '0 0 22px' }}>
                     {paragraph}
                   </p>
@@ -436,8 +442,7 @@ export function HomeTeacher() {
                     margin: '0 0 28px',
                   }}
                 >
-                  ਅਰਦਾਸ ਹੈ ਕਿ ਮਹਾਰਾਜ ਸੱਚੇ ਪਾਤਸ਼ਾਹ ਕਿਰਪਾ ਬਣਾਈ ਰੱਖਣ ਲਗਾਤਾਰਾ ਚ ਸੇਵਾ ਲੈਂਦੇ
-                  ਰਹਿਣ।
+                  {t('closing_prayer')}
                 </p>
 
                 <div
@@ -453,7 +458,7 @@ export function HomeTeacher() {
                       margin: '0 0 6px',
                     }}
                   >
-                    ਨੀਚਾ ਅੰਦਰਿ ਨੀਚ ਜਾਤਿ ਨੀਚੀ ਹੂ ਅਤਿ ਨੀਚ
+                    {t('closing_line')}
                   </p>
                   <p
                     style={{
@@ -464,7 +469,7 @@ export function HomeTeacher() {
                       margin: '0 0 10px',
                     }}
                   >
-                    ਗੁਰੂ ਗ੍ਰੰਥ ਜੀ ਗੁਰੂ ਪੰਥ ਜੀ ਅਤੇ ਸਾਧਸੰਗਤਿ ਦਾ ਗੋਲਾ
+                    {t('role')}
                   </p>
                   <p
                     style={{
@@ -473,7 +478,7 @@ export function HomeTeacher() {
                       margin: 0,
                     }}
                   >
-                    ਸਿਮਰਨਜੀਤ ਸਿੰਘ
+                    {t('name')}
                   </p>
                 </div>
               </div>

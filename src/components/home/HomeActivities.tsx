@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -12,66 +13,86 @@ type GalleryData = {
   images: string[];
 };
 
-const ACTIVITIES = [
-  {
-    category: 'gurbani',
-    image: '/assets/main/gw3.jpeg',
-    title: 'Gurbani Writing',
-    description:
-      'Encouraging Sikhs to read and write Gurbani in Larivaar, forming a new generation of Likhari.',
-  },
-  {
-    category: 'tradition',
-    image: '/assets/main/pt0.jpeg',
-    title: 'Preserving Tradition',
-    description:
-      'Conserving Puratan Beerh Sahibs and Pothis so the living memory of the Panth is protected with care.',
-  },
-  {
-    category: 'camps',
-    image: '/assets/main/cw0.jpeg',
-    title: 'Camps & Workshops',
-    description:
-      'Conducting regular camps and hands-on workshops rooted in practice, sangat, and disciplined study.',
-  },
-  {
-    category: 'online',
-    image: '/assets/main/ol2.jpeg',
-    title: 'Online Learning',
-    description:
-      'Running online book clubs and one-to-one Akharkaari classes for Sikhs learning from around the world.',
-  },
-] satisfies {
+type Activity = {
   category: GalleryCategory;
   image: string;
   title: string;
   description: string;
-}[];
-
-const GALLERY_DATA: Record<GalleryCategory, GalleryData> = {
-  gurbani: {
-    title: 'Gurbani Writing Photos',
-    images: Array.from({ length: 12 }, (_, i) => `/assets/main/gw${i}.jpeg`),
-  },
-  tradition: {
-    title: 'Preserving Tradition Photos',
-    images: Array.from({ length: 10 }, (_, i) => `/assets/main/pt${i}.jpeg`),
-  },
-  camps: {
-    title: 'Camps & Workshops Photos',
-    images: Array.from({ length: 19 }, (_, i) => `/assets/main/cw${i}.jpeg`),
-  },
-  online: {
-    title: 'Online Learning Photos',
-    images: Array.from({ length: 7 }, (_, i) => `/assets/main/ol${i}.jpeg`),
-  },
+  gallery_title: string;
 };
 
+const GALLERY_IMAGES: Record<GalleryCategory, string[]> = {
+  gurbani: Array.from({ length: 12 }, (_, i) => `/assets/main/gw${i}.jpeg`),
+  tradition: Array.from({ length: 10 }, (_, i) => `/assets/main/pt${i}.jpeg`),
+  camps: Array.from({ length: 19 }, (_, i) => `/assets/main/cw${i}.jpeg`),
+  online: Array.from({ length: 7 }, (_, i) => `/assets/main/ol${i}.jpeg`),
+};
+
+const getGalleryData = (
+  activities: Activity[]
+): Record<GalleryCategory, GalleryData> => ({
+  gurbani: {
+    title:
+      activities.find((item) => item.category === 'gurbani')?.gallery_title ??
+      '',
+    images: GALLERY_IMAGES.gurbani,
+  },
+  tradition: {
+    title:
+      activities.find((item) => item.category === 'tradition')?.gallery_title ??
+      '',
+    images: GALLERY_IMAGES.tradition,
+  },
+  camps: {
+    title:
+      activities.find((item) => item.category === 'camps')?.gallery_title ?? '',
+    images: GALLERY_IMAGES.camps,
+  },
+  online: {
+    title:
+      activities.find((item) => item.category === 'online')?.gallery_title ??
+      '',
+    images: GALLERY_IMAGES.online,
+  },
+});
+
 export function HomeActivities() {
+  const t = useTranslations('HomeActivities');
+  const activities: Activity[] = [
+    {
+      category: 'gurbani',
+      image: '/assets/main/gw3.jpeg',
+      title: t('activities.0.title'),
+      description: t('activities.0.description'),
+      gallery_title: t('activities.0.gallery_title'),
+    },
+    {
+      category: 'tradition',
+      image: '/assets/main/pt0.jpeg',
+      title: t('activities.1.title'),
+      description: t('activities.1.description'),
+      gallery_title: t('activities.1.gallery_title'),
+    },
+    {
+      category: 'camps',
+      image: '/assets/main/cw0.jpeg',
+      title: t('activities.2.title'),
+      description: t('activities.2.description'),
+      gallery_title: t('activities.2.gallery_title'),
+    },
+    {
+      category: 'online',
+      image: '/assets/main/ol2.jpeg',
+      title: t('activities.3.title'),
+      description: t('activities.3.description'),
+      gallery_title: t('activities.3.gallery_title'),
+    },
+  ];
+  const galleryData = getGalleryData(activities);
   const [selectedCategory, setSelectedCategory] =
     useState<GalleryCategory | null>(null);
   const selectedGallery =
-    selectedCategory === null ? null : GALLERY_DATA[selectedCategory];
+    selectedCategory === null ? null : galleryData[selectedCategory];
 
   return (
     <section
@@ -110,7 +131,7 @@ export function HomeActivities() {
               marginBottom: 12,
             }}
           >
-            Core Activities
+            {t('eyebrow')}
           </div>
           <h2
             style={{
@@ -123,7 +144,7 @@ export function HomeActivities() {
               marginBottom: 16,
             }}
           >
-            Regenerating Ancient Practice
+            {t('title')}
           </h2>
           <p
             style={{
@@ -133,9 +154,7 @@ export function HomeActivities() {
               margin: 0,
             }}
           >
-            Dedicated to preserving Sikh learning, strengthening Larivaar
-            literacy, and bridging the distance between modern life and living
-            tradition.
+            {t('description')}
           </p>
         </div>
 
@@ -146,7 +165,7 @@ export function HomeActivities() {
             gap: 20,
           }}
         >
-          {ACTIVITIES.map((activity) => (
+          {activities.map((activity) => (
             <button
               type="button"
               key={activity.title}
@@ -268,7 +287,7 @@ export function HomeActivities() {
                   textTransform: 'uppercase',
                 }}
               >
-                Close
+                {t('close_gallery')}
               </button>
             </div>
 

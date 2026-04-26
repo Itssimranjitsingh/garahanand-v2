@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 
@@ -55,6 +56,8 @@ const SOCIAL_LINKS = [
 ];
 
 export function HomeFooter() {
+  const t = useTranslations('HomeFooter');
+
   return (
     <footer
       id="contact"
@@ -75,7 +78,7 @@ export function HomeFooter() {
           <div className="min-w-0">
             <Image
               src="/assets/others/logo.png"
-              alt="GarhAnand logo"
+              alt={t('logo_alt')}
               width={56}
               height={56}
               sizes="56px"
@@ -98,7 +101,7 @@ export function HomeFooter() {
                 marginBottom: 16,
               }}
             >
-              <span style={{ color: '#C2A36B' }}>ੴ</span> GarhAnand
+              <span style={{ color: '#C2A36B' }}>ੴ</span> {t('brand_name')}
             </div>
             <p
               style={{
@@ -109,8 +112,7 @@ export function HomeFooter() {
                 margin: '0 0 12px',
               }}
             >
-              A sacred learning platform dedicated to the preservation and
-              teaching of Larivaar Gurmukhi in the Sikh tradition.
+              {t('description_1')}
             </p>
             <p
               style={{
@@ -121,8 +123,7 @@ export function HomeFooter() {
                 marginBottom: 20,
               }}
             >
-              Reviving the forgotten traditions of the Khalsa Panth for a
-              principle-driven future.
+              {t('description_2')}
             </p>
             <div
               style={{
@@ -133,7 +134,7 @@ export function HomeFooter() {
                 wordSpacing: '-0.45em',
               }}
             >
-              ਸਤਿਨਾਮੁਕਰਤਾਪੁਰਖੁ
+              {t('gurmukhi_line')}
             </div>
           </div>
 
@@ -149,7 +150,7 @@ export function HomeFooter() {
                 opacity: 0.7,
               }}
             >
-              Get in Touch
+              {t('contact_heading')}
             </div>
             <ul
               style={{
@@ -200,7 +201,7 @@ export function HomeFooter() {
                 opacity: 0.7,
               }}
             >
-              Follow
+              {t('follow_heading')}
             </div>
             <div style={{ display: 'flex', gap: 12 }}>
               {SOCIAL_LINKS.map((item) => (
@@ -251,7 +252,7 @@ export function HomeFooter() {
               letterSpacing: '0.03em',
             }}
           >
-            © {new Date().getFullYear()} GarhAnand. All rights reserved.
+            {t('copyright', { year: new Date().getFullYear() })}
           </div>
           <div
             className="flex flex-col items-start gap-3 sm:flex-row sm:items-center sm:gap-4"
@@ -267,7 +268,7 @@ export function HomeFooter() {
                 letterSpacing: '0.03em',
               }}
             >
-              Built with care for the Sikh tradition.
+              {t('built_with_care')}
             </div>
           </div>
         </div>

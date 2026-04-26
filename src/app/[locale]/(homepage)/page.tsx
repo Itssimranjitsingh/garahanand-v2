@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { HomeActivities } from '@/components/home/HomeActivities';
 import { HomeCamps } from '@/components/home/HomeCamps';
 import { HomeFooter } from '@/components/home/HomeFooter';
@@ -12,11 +12,18 @@ import { HomeTeacher } from '@/components/home/HomeTeacher';
 
 type Props = { params: Promise<{ locale: string }> };
 
-export const metadata: Metadata = {
-  title: 'GarhAnand — Sacred Larivaar Learning',
-  description:
-    'GarhAnand teaches the ancient art of Larivaar — continuous Gurmukhi script — as a path toward deeper understanding of Gurbani.',
-};
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const { locale } = await props.params;
+  const t = await getTranslations({
+    locale,
+    namespace: 'HomePage',
+  });
+
+  return {
+    title: t('meta_title'),
+    description: t('meta_description'),
+  };
+}
 
 export default async function HomePage(props: Props) {
   const { locale } = await props.params;

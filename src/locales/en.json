@@ -124,25 +124,21 @@
     "close_gallery": "Close",
     "activities": [
       {
-        "category": "gurbani",
         "title": "Gurbani Writing",
         "description": "Encouraging Sikhs to read and write Gurbani in Larivaar, forming a new generation of Likhari.",
         "gallery_title": "Gurbani Writing Photos"
       },
       {
-        "category": "tradition",
         "title": "Preserving Tradition",
         "description": "Conserving Puratan Beerh Sahibs and Pothis so the living memory of the Panth is protected with care.",
         "gallery_title": "Preserving Tradition Photos"
       },
       {
-        "category": "camps",
         "title": "Camps and Workshops",
         "description": "Conducting regular camps and hands-on workshops rooted in practice, sangat, and disciplined study.",
         "gallery_title": "Camps and Workshops Photos"
       },
       {
-        "category": "online",
         "title": "Online Learning",
         "description": "Running online book clubs and one-to-one Akharkaari classes for Sikhs learning from around the world.",
         "gallery_title": "Online Learning Photos"

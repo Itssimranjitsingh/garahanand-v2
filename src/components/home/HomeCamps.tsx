@@ -1,35 +1,43 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
+
 const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
 
-const CAMPS = [
-  {
-    year: '2024',
-    location: 'Anandpur Sahib',
-    title: 'Winter Larivaar Camp',
-    days: '5 days',
-    snippet:
-      'Forty-two students gathered in the sacred city of Anandpur for five days of morning paath, afternoon study, and evening reflection.',
-  },
-  {
-    year: '2023',
-    location: 'Amritsar',
-    title: 'Darbar Sahib Intensive',
-    days: '3 days',
-    snippet:
-      'Held in the shadow of Harmandir Sahib, participants studied Larivaar in the context of kirtan and seva.',
-  },
-  {
-    year: '2023',
-    location: 'Himachal Pradesh',
-    title: 'Mountain Retreat',
-    days: '7 days',
-    snippet:
-      'A remote study camp in the hills — minimal distraction, deep learning, and the sound of Gurbani in the open air.',
-  },
-];
+type Camp = {
+  year: string;
+  location: string;
+  title: string;
+  days: string;
+  snippet: string;
+};
 
 export function HomeCamps() {
+  const t = useTranslations('HomeCamps');
+  const camps: Camp[] = [
+    {
+      year: t('camps.0.year'),
+      location: t('camps.0.location'),
+      title: t('camps.0.title'),
+      days: t('camps.0.days'),
+      snippet: t('camps.0.snippet'),
+    },
+    {
+      year: t('camps.1.year'),
+      location: t('camps.1.location'),
+      title: t('camps.1.title'),
+      days: t('camps.1.days'),
+      snippet: t('camps.1.snippet'),
+    },
+    {
+      year: t('camps.2.year'),
+      location: t('camps.2.location'),
+      title: t('camps.2.title'),
+      days: t('camps.2.days'),
+      snippet: t('camps.2.snippet'),
+    },
+  ];
+
   return (
     <section
       id="camps"
@@ -51,7 +59,7 @@ export function HomeCamps() {
               marginBottom: 10,
             }}
           >
-            Immersive Learning
+            {t('eyebrow')}
           </div>
           <h2
             style={{
@@ -63,7 +71,7 @@ export function HomeCamps() {
               color: '#F5F1E8',
             }}
           >
-            Camps &amp; Retreats
+            {t('title')}
           </h2>
         </div>
 
@@ -74,7 +82,7 @@ export function HomeCamps() {
             gap: 20,
           }}
         >
-          {CAMPS.map((c) => (
+          {camps.map((c) => (
             <div
               key={c.title}
               style={{
@@ -195,9 +203,7 @@ export function HomeCamps() {
               marginBottom: 14,
             }}
           >
-            &quot;Learning Larivaar at the camp changed my relationship with
-            Gurbani entirely. The text came alive in a way I had never
-            experienced in twenty years of reading.&quot;
+            &quot;{t('quote')}&quot;
           </blockquote>
           <div
             style={{
@@ -207,7 +213,7 @@ export function HomeCamps() {
               color: 'rgba(194,163,107,0.6)',
             }}
           >
-            Camp Participant, Anandpur 2024
+            {t('quote_attribution')}
           </div>
         </div>
       </div>

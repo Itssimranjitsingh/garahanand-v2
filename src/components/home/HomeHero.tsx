@@ -1,11 +1,14 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
 const FONT_GU = 'var(--font-noto-gurmukhi), sans-serif';
 
 export function HomeHero() {
+  const t = useTranslations('HomeHero');
+
   return (
     <section
       style={{
@@ -87,7 +90,7 @@ export function HomeHero() {
         >
           <Image
             src="/assets/others/satgur_prasad_white.png"
-            alt="Ik Onkar and Satgur Prasad in Gurmukhi calligraphy"
+            alt={t('satgur_prasad_image_alt')}
             fill
             sizes="(max-width: 768px) 100vw, 24rem"
             priority
@@ -108,7 +111,7 @@ export function HomeHero() {
             marginBottom: 24,
           }}
         >
-          ੴ &nbsp; A Sacred Learning Platform
+          {t('eyebrow')}
         </div>
 
         <h1
@@ -123,12 +126,12 @@ export function HomeHero() {
             margin: '0 auto 16px',
           }}
         >
-          Return to the Unbroken
+          {t('title_line_1')}
           <br />
           <em
             style={{ fontStyle: 'italic', color: '#C2A36B', fontWeight: 300 }}
           >
-            Word of the Guru
+            {t('title_line_2')}
           </em>
         </h1>
 
@@ -155,8 +158,7 @@ export function HomeHero() {
             margin: '0 auto 36px',
           }}
         >
-          GarhAnand teaches the ancient art of Larivaar — continuous Gurmukhi
-          script — as a path toward deeper understanding of Gurbani.
+          {t('description')}
         </p>
 
         <div
@@ -186,7 +188,7 @@ export function HomeHero() {
             onMouseEnter={(e) => (e.currentTarget.style.background = '#8FBFAB')}
             onMouseLeave={(e) => (e.currentTarget.style.background = '#7FAF9B')}
           >
-            Begin Learning
+            {t('primary_cta')}
           </a>
           <a
             href="#about"
@@ -211,7 +213,7 @@ export function HomeHero() {
               (e.currentTarget.style.background = 'transparent')
             }
           >
-            Our Mission
+            {t('secondary_cta')}
           </a>
         </div>
 
@@ -228,7 +230,7 @@ export function HomeHero() {
               wordSpacing: '-0.45em',
             }}
           >
-            ਸਤਿਨਾਮੁਕਰਤਾਪੁਰਖੁਨਿਰਭਉਨਿਰਵੈਰੁਅਕਾਲਮੂਰਤਿਅਜੂਨੀਸੈਭੰਗੁਰਪ੍ਰਸਾਦਿ
+            {t('mool_mantar_larivaar')}
           </div>
           <div
             style={{
@@ -239,7 +241,7 @@ export function HomeHero() {
               marginTop: 8,
             }}
           >
-            Mool Mantar — Guru Granth Sahib, Ang 1 (Larivaar form)
+            {t('mool_mantar_caption')}
           </div>
         </div>
       </div>
@@ -265,7 +267,7 @@ export function HomeHero() {
         <div
           style={{ width: 1, height: 32, background: 'rgba(194,163,107,0.25)' }}
         />
-        scroll
+        {t('scroll_hint')}
       </div>
     </section>
   );

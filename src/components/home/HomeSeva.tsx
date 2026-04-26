@@ -1,5 +1,6 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -21,6 +22,8 @@ const presetBtnStyle = (active: boolean) => ({
 });
 
 export function HomeSeva() {
+  const t = useTranslations('HomeSeva');
+  const supports = [t('supports.0'), t('supports.1'), t('supports.2')];
   const [amount, setAmount] = useState('1101');
   const [custom, setCustom] = useState('');
   const [monthly, setMonthly] = useState(false);
@@ -56,7 +59,7 @@ export function HomeSeva() {
               marginBottom: 16,
             }}
           >
-            Waheguru Meherbaan
+            {t('success_title')}
           </h2>
           <p
             style={{
@@ -66,9 +69,7 @@ export function HomeSeva() {
               marginBottom: 24,
             }}
           >
-            Your seva has been received with gratitude. This contribution
-            supports the continuation of Larivaar learning for students across
-            the world.
+            {t('success_message')}
           </p>
           <div
             aria-hidden
@@ -90,7 +91,7 @@ export function HomeSeva() {
               color: 'rgba(26,46,46,0.55)',
             }}
           >
-            &quot;In the company of the holy, one finds the Naam.&quot;
+            &quot;{t('success_quote')}&quot;
             <br />
             <span
               style={{
@@ -101,7 +102,7 @@ export function HomeSeva() {
                 color: 'rgba(194,163,107,0.8)',
               }}
             >
-              Guru Granth Sahib
+              {t('success_quote_source')}
             </span>
           </p>
           <button
@@ -121,7 +122,7 @@ export function HomeSeva() {
               cursor: 'pointer',
             }}
           >
-            Return
+            {t('return')}
           </button>
         </div>
       </section>
@@ -149,7 +150,7 @@ export function HomeSeva() {
               marginBottom: 12,
             }}
           >
-            Seva — Selfless Contribution
+            {t('eyebrow')}
           </div>
           <h2
             style={{
@@ -162,7 +163,7 @@ export function HomeSeva() {
               marginBottom: 14,
             }}
           >
-            Support the Mission
+            {t('title')}
           </h2>
           <p
             style={{
@@ -173,9 +174,7 @@ export function HomeSeva() {
               margin: '0 auto',
             }}
           >
-            Your contribution enables us to host learning camps, preserve sacred
-            manuscripts, and make traditional Sikh education accessible to all —
-            freely and without condition.
+            {t('description')}
           </p>
         </div>
 
@@ -197,7 +196,7 @@ export function HomeSeva() {
               marginBottom: 12,
             }}
           >
-            Choose an amount
+            {t('choose_amount')}
           </div>
 
           <div
@@ -229,7 +228,7 @@ export function HomeSeva() {
               }}
               style={presetBtnStyle(amount === 'custom')}
             >
-              Other
+              {t('other_amount')}
             </button>
           </div>
 
@@ -237,7 +236,7 @@ export function HomeSeva() {
             <div style={{ marginBottom: 16 }}>
               <input
                 type="number"
-                placeholder="Enter amount (₹)"
+                placeholder={t('amount_placeholder')}
                 value={custom}
                 onChange={(e) => {
                   setCustom(e.target.value);
@@ -303,7 +302,7 @@ export function HomeSeva() {
               />
             </button>
             <span style={{ fontSize: 13, color: 'rgba(26,46,46,0.65)' }}>
-              Monthly seva — sustain this work every month
+              {t('monthly_label')}
             </span>
           </div>
 
@@ -330,7 +329,7 @@ export function HomeSeva() {
                   margin: '0 0 14px',
                 }}
               >
-                Bank transfer
+                {t('bank_heading')}
               </h3>
               <dl
                 style={{
@@ -342,14 +341,16 @@ export function HomeSeva() {
                 }}
               >
                 <div>
-                  <dt style={{ color: 'rgba(26,46,46,0.48)' }}>Account name</dt>
+                  <dt style={{ color: 'rgba(26,46,46,0.48)' }}>
+                    {t('account_name_label')}
+                  </dt>
                   <dd style={{ margin: 0, color: '#1A2E2E' }}>
-                    Garh Anand Welfare Society
+                    {t('account_name_value')}
                   </dd>
                 </div>
                 <div>
                   <dt style={{ color: 'rgba(26,46,46,0.48)' }}>
-                    Account number
+                    {t('account_number_label')}
                   </dt>
                   <dd
                     style={{
@@ -359,11 +360,13 @@ export function HomeSeva() {
                       overflowWrap: 'anywhere',
                     }}
                   >
-                    50200098923091
+                    {t('account_number_value')}
                   </dd>
                 </div>
                 <div>
-                  <dt style={{ color: 'rgba(26,46,46,0.48)' }}>IFSC code</dt>
+                  <dt style={{ color: 'rgba(26,46,46,0.48)' }}>
+                    {t('ifsc_label')}
+                  </dt>
                   <dd
                     style={{
                       margin: 0,
@@ -371,7 +374,7 @@ export function HomeSeva() {
                       fontFamily: 'monospace',
                     }}
                   >
-                    HDFC0001331
+                    {t('ifsc_value')}
                   </dd>
                 </div>
               </dl>
@@ -389,7 +392,7 @@ export function HomeSeva() {
                   textUnderlineOffset: 3,
                 }}
               >
-                Send your receipt on WhatsApp
+                {t('whatsapp_receipt')}
               </a>
             </div>
 
@@ -410,7 +413,7 @@ export function HomeSeva() {
               >
                 <Image
                   src="/assets/others/qr.jpeg"
-                  alt="PhonePe QR code for donations to Garh Anand Welfare Society"
+                  alt={t('qr_alt')}
                   fill
                   sizes="(max-width: 768px) 100vw, 220px"
                   style={{ objectFit: 'contain' }}
@@ -441,7 +444,7 @@ export function HomeSeva() {
             onMouseEnter={(e) => (e.currentTarget.style.background = '#8FBFAB')}
             onMouseLeave={(e) => (e.currentTarget.style.background = '#7FAF9B')}
           >
-            Contribute with Seva →
+            {t('submit')} →
           </button>
           <div
             style={{
@@ -451,7 +454,7 @@ export function HomeSeva() {
               letterSpacing: '0.02em',
             }}
           >
-            Secure payment · No account required · Cancel anytime
+            {t('payment_note')}
           </div>
         </div>
 
@@ -475,7 +478,7 @@ export function HomeSeva() {
               marginBottom: 12,
             }}
           >
-            Your seva supports
+            {t('supports_heading')}
           </div>
           <div
             style={{
@@ -484,11 +487,7 @@ export function HomeSeva() {
               gap: 10,
             }}
           >
-            {[
-              'Hosting learning camps and retreats',
-              'Preserving and digitising Sikh manuscripts',
-              'Building accessible learning for all',
-            ].map((item) => (
+            {supports.map((item) => (
               <div
                 key={item}
                 style={{ display: 'flex', alignItems: 'flex-start', gap: 10 }}

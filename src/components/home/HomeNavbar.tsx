@@ -1,20 +1,21 @@
 'use client';
 
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { Link } from '@/libs/I18nNavigation';
 
-const NAV_LINKS = [
-  { label: 'Learn', href: '/#learn' },
-  { label: 'Activities', href: '/#activities' },
-  { label: 'Missions', href: '/#missions' },
-  { label: 'Camps', href: '/#camps' },
-  { label: 'About', href: '/#about' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Team', href: '/team' },
-];
-
 export function HomeNavbar() {
+  const t = useTranslations('HomeNavbar');
+  const navLinks = [
+    { label: t('learn'), href: '/#learn' },
+    { label: t('activities'), href: '/#activities' },
+    { label: t('missions'), href: '/#missions' },
+    { label: t('camps'), href: '/#camps' },
+    { label: t('about'), href: '/#about' },
+    { label: t('blog'), href: '/blog' },
+    { label: t('team'), href: '/team' },
+  ];
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -63,11 +64,11 @@ export function HomeNavbar() {
           letterSpacing: '0.02em',
           height: 48,
         }}
-        aria-label="GarhAnand home"
+        aria-label={t('home_aria_label')}
       >
         <Image
           src="/assets/others/logo.png"
-          alt="GarhAnand logo"
+          alt={t('logo_alt')}
           width={48}
           height={48}
           sizes="48px"
@@ -80,7 +81,7 @@ export function HomeNavbar() {
         />
         <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <span style={{ color: '#C2A36B', fontSize: 22 }}>ੴ</span>
-          GarhAnand
+          {t('brand_name')}
         </span>
       </Link>
 
@@ -94,7 +95,7 @@ export function HomeNavbar() {
           padding: 0,
         }}
       >
-        {NAV_LINKS.map((link) => (
+        {navLinks.map((link) => (
           <li key={link.href} className="hidden sm:block">
             <Link
               href={link.href}
@@ -137,7 +138,7 @@ export function HomeNavbar() {
             onMouseEnter={(e) => (e.currentTarget.style.background = '#8FBFAB')}
             onMouseLeave={(e) => (e.currentTarget.style.background = '#7FAF9B')}
           >
-            Seva
+            {t('seva')}
           </Link>
         </li>
       </ul>
