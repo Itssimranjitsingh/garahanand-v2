@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
+import { HomeActivities } from '@/components/home/HomeActivities';
 import { HomeCamps } from '@/components/home/HomeCamps';
 import { HomeFooter } from '@/components/home/HomeFooter';
 import { HomeHero } from '@/components/home/HomeHero';
 import { HomeLarivaar } from '@/components/home/HomeLarivaar';
+import { HomeMissions } from '@/components/home/HomeMissions';
 import { HomeNavbar } from '@/components/home/HomeNavbar';
 import { HomeSeva } from '@/components/home/HomeSeva';
 import { HomeTeacher } from '@/components/home/HomeTeacher';
@@ -25,6 +27,8 @@ export default async function HomePage(props: Props) {
       <HomeNavbar />
       <HomeHero />
       <HomeLarivaar />
+      <HomeActivities />
+      <HomeMissions />
       <HomeCamps />
       <HomeTeacher />
       <HomeSeva />

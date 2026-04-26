@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #0f2a2a;
+        padding: 28px 32px;
+      }
+      .label {
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #c2a36b;
+        margin-bottom: 14px;
+      }
+      .row {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+      }
+      .row:last-child {
+        margin-bottom: 0;
+      }
+      .divider {
+        height: 1px;
+        background: rgba(194, 163, 107, 0.12);
+        margin: 4px 0 20px;
+      }
+
+      /* Button base */
+      button {
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        padding: 10px 24px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        transition: all 200ms ease-out;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* Primary — sage filled */
+      .btn-primary {
+        background: #7faf9b;
+        color: #0f2a2a;
+      }
+      .btn-primary:hover {
+        background: #8fbfab;
+      }
+      .btn-primary:active {
+        background: #6f9f8b;
+        transform: scale(0.98);
+      }
+      .btn-primary:disabled {
+        background: rgba(127, 175, 155, 0.35);
+        color: rgba(15, 42, 42, 0.5);
+        cursor: not-allowed;
+      }
+
+      /* Secondary — gold outlined */
+      .btn-secondary {
+        background: transparent;
+        color: #c2a36b;
+        border: 1px solid #c2a36b;
+      }
+      .btn-secondary:hover {
+        background: rgba(194, 163, 107, 0.08);
+        border-color: #d4b882;
+      }
+      .btn-secondary:active {
+        background: rgba(194, 163, 107, 0.15);
+        transform: scale(0.98);
+      }
+      .btn-secondary:disabled {
+        border-color: rgba(194, 163, 107, 0.3);
+        color: rgba(194, 163, 107, 0.3);
+        cursor: not-allowed;
+      }
+
+      /* Ghost */
+      .btn-ghost {
+        background: transparent;
+        color: #f5f1e8;
+        border: 1px solid rgba(245, 241, 232, 0.2);
+      }
+      .btn-ghost:hover {
+        border-color: rgba(245, 241, 232, 0.45);
+        background: rgba(245, 241, 232, 0.05);
+      }
+
+      /* Small */
+      .btn-sm {
+        font-size: 11px;
+        padding: 7px 16px;
+        letter-spacing: 0.06em;
+      }
+
+      /* State labels */
+      .state-label {
+        font-size: 9px;
+        color: rgba(245, 241, 232, 0.3);
+        margin-top: 4px;
+        text-align: center;
+      }
+      .state-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="label">Primary Button — Sage Filled</div>
+    <div class="row">
+      <div class="state-col">
+        <button class="btn-primary">Contribute Seva</button>
+        <div class="state-label">default</div>
+      </div>
+      <div class="state-col">
+        <button class="btn-primary" style="background: #8fbfab">
+          Contribute Seva
+        </button>
+        <div class="state-label">hover</div>
+      </div>
+      <div class="state-col">
+        <button
+          class="btn-primary"
+          style="background: #6f9f8b; transform: scale(0.98)"
+        >
+          Contribute Seva
+        </button>
+        <div class="state-label">active</div>
+      </div>
+      <div class="state-col">
+        <button class="btn-primary" disabled>Contribute Seva</button>
+        <div class="state-label">disabled</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="label">Secondary Button — Gold Outlined</div>
+    <div class="row">
+      <div class="state-col">
+        <button class="btn-secondary">Explore Courses</button>
+        <div class="state-label">default</div>
+      </div>
+      <div class="state-col">
+        <button
+          class="btn-secondary"
+          style="background: rgba(194, 163, 107, 0.08); border-color: #d4b882"
+        >
+          Explore Courses
+        </button>
+        <div class="state-label">hover</div>
+      </div>
+      <div class="state-col">
+        <button class="btn-secondary" disabled>Explore Courses</button>
+        <div class="state-label">disabled</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="label">Ghost &amp; Small Variants</div>
+    <div class="row">
+      <div class="state-col">
+        <button class="btn-ghost">Learn More</button>
+        <div class="state-label">ghost</div>
+      </div>
+      <div class="state-col">
+        <button class="btn-primary btn-sm">Seva →</button>
+        <div class="state-label">primary sm</div>
+      </div>
+      <div class="state-col">
+        <button class="btn-secondary btn-sm">View Camp</button>
+        <div class="state-label">secondary sm</div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -4,19 +4,23 @@ import type { BlogPostDetail } from '@/sanity/types';
 
 const components: PortableTextComponents = {
   block: {
-    normal: (props) => <p className="text-gray-800">{props.children}</p>,
+    normal: (props) => (
+      <p className="mb-6 text-[18px] leading-[1.8] text-[rgba(26,46,46,0.72)]">
+        {props.children}
+      </p>
+    ),
     h2: (props) => (
-      <h2 className="mt-10 mb-4 text-2xl font-bold text-gray-900">
+      <h2 className="mt-12 mb-5 font-heading text-3xl font-normal text-[#1A2E2E]">
         {props.children}
       </h2>
     ),
     h3: (props) => (
-      <h3 className="mt-8 mb-3 text-xl font-bold text-gray-900">
+      <h3 className="mt-10 mb-4 font-heading text-2xl font-normal text-[#1A2E2E]">
         {props.children}
       </h3>
     ),
     blockquote: (props) => (
-      <blockquote className="mb-6 border-l-4 border-gray-400 pl-4 text-gray-800 italic">
+      <blockquote className="my-8 border-l border-[rgba(194,163,107,0.45)] pl-6 font-heading text-2xl leading-[1.65] font-light text-[rgba(26,46,46,0.76)] italic">
         {props.children}
       </blockquote>
     ),
@@ -29,7 +33,7 @@ const components: PortableTextComponents = {
       return (
         <a
           href={href}
-          className="text-gray-800 underline decoration-gray-400 underline-offset-2 hover:text-gray-900"
+          className="text-[#8A6A2F] underline decoration-[rgba(194,163,107,0.45)] underline-offset-4 hover:text-[#1A2E2E]"
           {...(external
             ? { rel: 'noreferrer noopener', target: '_blank' }
             : {})}
@@ -41,12 +45,12 @@ const components: PortableTextComponents = {
   },
   list: {
     bullet: (props) => (
-      <ul className="mb-6 ml-6 list-disc space-y-2 text-gray-800">
+      <ul className="mb-6 ml-6 list-disc space-y-2 text-[18px] leading-[1.8] text-[rgba(26,46,46,0.72)]">
         {props.children}
       </ul>
     ),
     number: (props) => (
-      <ol className="mb-6 ml-6 list-decimal space-y-2 text-gray-800">
+      <ol className="mb-6 ml-6 list-decimal space-y-2 text-[18px] leading-[1.8] text-[rgba(26,46,46,0.72)]">
         {props.children}
       </ol>
     ),

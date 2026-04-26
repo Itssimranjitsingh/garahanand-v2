@@ -7,6 +7,7 @@ const config: KnipConfig = {
     'src/libs/I18n.ts',
     'src/types/I18n.ts',
     'tests/**/*.ts',
+    'design system/**',
   ],
   // Dependencies to ignore during analysis
   ignoreDependencies: [

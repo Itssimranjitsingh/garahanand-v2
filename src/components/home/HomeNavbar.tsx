@@ -1,17 +1,30 @@
 'use client';
 
-import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { Link } from '@/libs/I18nNavigation';
 
-const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
+const NAV_LINKS = [
+  { label: 'Learn', href: '/#learn' },
+  { label: 'Activities', href: '/#activities' },
+  { label: 'Missions', href: '/#missions' },
+  { label: 'Camps', href: '/#camps' },
+  { label: 'About', href: '/#about' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Team', href: '/team' },
+];
 
 export function HomeNavbar() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 48);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 48);
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    };
   }, []);
 
   return (
@@ -39,19 +52,36 @@ export function HomeNavbar() {
       <Link
         href="/"
         style={{
-          fontFamily: FONT_DISPLAY,
-          fontSize: 20,
-          fontWeight: 400,
-          color: '#F5F1E8',
-          textDecoration: 'none',
           display: 'flex',
           alignItems: 'center',
-          gap: 8,
+          gap: 10,
+          color: '#F5F1E8',
+          textDecoration: 'none',
+          fontFamily: 'var(--font-cormorant), Georgia, serif',
+          fontSize: 20,
+          fontWeight: 400,
           letterSpacing: '0.02em',
+          height: 48,
         }}
+        aria-label="GarhAnand home"
       >
-        <span style={{ color: '#C2A36B', fontSize: 22 }}>ੴ</span>
-        GarhAnand
+        <Image
+          src="/assets/others/logo.png"
+          alt="GarhAnand logo"
+          width={48}
+          height={48}
+          sizes="48px"
+          style={{
+            height: 48,
+            width: 48,
+            objectFit: 'contain',
+          }}
+          priority
+        />
+        <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ color: '#C2A36B', fontSize: 22 }}>ੴ</span>
+          GarhAnand
+        </span>
       </Link>
 
       <ul
@@ -64,10 +94,10 @@ export function HomeNavbar() {
           padding: 0,
         }}
       >
-        {['Learn', 'Camps', 'Texts', 'About'].map((label) => (
-          <li key={label} className="hidden sm:block">
-            <a
-              href={`#${label.toLowerCase()}`}
+        {NAV_LINKS.map((link) => (
+          <li key={link.href} className="hidden sm:block">
+            <Link
+              href={link.href}
               style={{
                 fontSize: 11,
                 fontWeight: 500,
@@ -82,13 +112,13 @@ export function HomeNavbar() {
                 (e.currentTarget.style.color = 'rgba(245,241,232,0.6)')
               }
             >
-              {label}
-            </a>
+              {link.label}
+            </Link>
           </li>
         ))}
         <li>
-          <a
-            href="#seva"
+          <Link
+            href="/#seva"
             style={{
               fontFamily: 'var(--font-eb-garamond), system-ui, sans-serif',
               fontSize: 11,
@@ -108,7 +138,7 @@ export function HomeNavbar() {
             onMouseLeave={(e) => (e.currentTarget.style.background = '#7FAF9B')}
           >
             Seva
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

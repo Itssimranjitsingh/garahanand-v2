@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #0f2a2a;
+        padding: 24px 28px;
+      }
+      .label {
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #c2a36b;
+        margin-bottom: 14px;
+      }
+      .scale {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+      }
+      .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+      }
+      .bar {
+        background: #7faf9b;
+        border-radius: 2px;
+        width: 20px;
+      }
+      .tok {
+        font-size: 9px;
+        color: rgba(245, 241, 232, 0.4);
+        font-family: monospace;
+      }
+      .px {
+        font-size: 9px;
+        color: rgba(245, 241, 232, 0.25);
+      }
+      .divider {
+        height: 1px;
+        background: rgba(194, 163, 107, 0.12);
+        margin: 18px 0;
+      }
+      .radius-row {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+      .rbox {
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(194, 163, 107, 0.25);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        width: 70px;
+        height: 52px;
+      }
+      .rlabel {
+        font-size: 9px;
+        color: rgba(245, 241, 232, 0.4);
+      }
+      .rname {
+        font-size: 10px;
+        color: #c2a36b;
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="label">Spacing Scale — 8px base unit</div>
+    <div class="scale">
+      <div class="step">
+        <div class="bar" style="height: 8px"></div>
+        <div class="tok">--space-1</div>
+        <div class="px">8px</div>
+      </div>
+      <div class="step">
+        <div class="bar" style="height: 16px"></div>
+        <div class="tok">--space-2</div>
+        <div class="px">16px</div>
+      </div>
+      <div class="step">
+        <div class="bar" style="height: 24px"></div>
+        <div class="tok">--space-3</div>
+        <div class="px">24px</div>
+      </div>
+      <div class="step">
+        <div class="bar" style="height: 32px"></div>
+        <div class="tok">--space-4</div>
+        <div class="px">32px</div>
+      </div>
+      <div class="step">
+        <div class="bar" style="height: 48px"></div>
+        <div class="tok">--space-6</div>
+        <div class="px">48px</div>
+      </div>
+      <div class="step">
+        <div class="bar" style="height: 64px"></div>
+        <div class="tok">--space-8</div>
+        <div class="px">64px</div>
+      </div>
+      <div class="step">
+        <div class="bar" style="height: 80px; opacity: 0.7"></div>
+        <div class="tok">--space-10</div>
+        <div class="px">80px</div>
+      </div>
+      <div class="step">
+        <div class="bar" style="height: 96px; opacity: 0.5"></div>
+        <div class="tok">--space-12</div>
+        <div class="px">96px</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="label">Border Radius</div>
+    <div class="radius-row">
+      <div class="rbox" style="border-radius: 2px">
+        <div class="rname">--radius-sm</div>
+        <div class="rlabel">2px</div>
+      </div>
+      <div class="rbox" style="border-radius: 4px">
+        <div class="rname">--radius-md</div>
+        <div class="rlabel">4px</div>
+      </div>
+      <div class="rbox" style="border-radius: 8px">
+        <div class="rname">--radius-lg</div>
+        <div class="rlabel">8px</div>
+      </div>
+      <div class="rbox" style="border-radius: 9999px; width: 90px">
+        <div class="rname">--radius-pill</div>
+        <div class="rlabel">pill</div>
+      </div>
+    </div>
+  </body>
+</html>

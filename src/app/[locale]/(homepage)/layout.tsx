@@ -6,5 +6,5 @@ export default async function HomepageLayout(props: {
 }) {
   const { locale } = await props.params;
   setRequestLocale(locale);
-  return <>{props.children}</>;
+  return props.children;
 }

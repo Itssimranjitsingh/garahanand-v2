@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #0f2a2a;
+        padding: 24px 28px;
+      }
+      .label {
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #c2a36b;
+        margin-bottom: 14px;
+      }
+      .row {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .shadow-demo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+      .box {
+        width: 90px;
+        height: 56px;
+        border-radius: 4px;
+        background: #163535;
+      }
+      .sname {
+        font-size: 10px;
+        color: rgba(245, 241, 232, 0.45);
+        font-family: monospace;
+        text-align: center;
+      }
+      .sdesc {
+        font-size: 9px;
+        color: rgba(245, 241, 232, 0.25);
+        text-align: center;
+      }
+      .divider {
+        height: 1px;
+        background: rgba(194, 163, 107, 0.12);
+        margin: 18px 0;
+      }
+      .border-row {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .border-demo {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
+      }
+      .border-box {
+        width: 100px;
+        height: 36px;
+        border-radius: 4px;
+      }
+      .blabel {
+        font-size: 9px;
+        color: rgba(245, 241, 232, 0.35);
+        font-family: monospace;
+      }
+      .anim-row {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 4px;
+      }
+      .anim-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .anim-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #7faf9b;
+      }
+      .anim-text {
+        font-size: 10px;
+        color: rgba(245, 241, 232, 0.5);
+      }
+      .anim-val {
+        font-size: 10px;
+        color: #c2a36b;
+        font-family: monospace;
+        margin-left: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="label">Shadow System</div>
+    <div class="row">
+      <div class="shadow-demo">
+        <div
+          class="box"
+          style="box-shadow: none; border: 1px solid rgba(194, 163, 107, 0.15)"
+        ></div>
+        <div class="sname">flat</div>
+        <div class="sdesc">No shadow — default card</div>
+      </div>
+      <div class="shadow-demo">
+        <div
+          class="box"
+          style="box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12)"
+        ></div>
+        <div class="sname">--shadow-subtle</div>
+        <div class="sdesc">Hover / light lift</div>
+      </div>
+      <div class="shadow-demo">
+        <div
+          class="box"
+          style="
+            box-shadow:
+              0 1px 4px rgba(0, 0, 0, 0.18),
+              0 4px 16px rgba(0, 0, 0, 0.08);
+          "
+        ></div>
+        <div class="sname">--shadow-float</div>
+        <div class="sdesc">Navbar on scroll</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="label">Border Tokens</div>
+    <div class="border-row">
+      <div class="border-demo">
+        <div
+          class="border-box"
+          style="
+            background: transparent;
+            border: 1px solid rgba(194, 163, 107, 0.2);
+          "
+        ></div>
+        <div class="blabel">--border-subtle</div>
+      </div>
+      <div class="border-demo">
+        <div
+          class="border-box"
+          style="
+            background: transparent;
+            border: 1px solid rgba(194, 163, 107, 0.4);
+          "
+        ></div>
+        <div class="blabel">--border-hover</div>
+      </div>
+      <div class="border-demo">
+        <div
+          class="border-box"
+          style="
+            background: transparent;
+            border-top: 1px solid rgba(194, 163, 107, 0.15);
+          "
+        ></div>
+        <div class="blabel">--border-divider-dark</div>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <div class="label">Animation Tokens</div>
+    <div class="anim-row">
+      <div class="anim-item">
+        <div class="anim-dot" style="opacity: 0.5"></div>
+        <div class="anim-text">Fast — hover transitions</div>
+        <div class="anim-val">200ms ease-out</div>
+      </div>
+      <div class="anim-item">
+        <div class="anim-dot"></div>
+        <div class="anim-text">Normal — fade-in entries</div>
+        <div class="anim-val">350ms ease-out</div>
+      </div>
+      <div class="anim-item">
+        <div class="anim-dot" style="opacity: 0.7"></div>
+        <div class="anim-text">Slow — section reveals</div>
+        <div class="anim-val">500ms ease-out</div>
+      </div>
+    </div>
+  </body>
+</html>

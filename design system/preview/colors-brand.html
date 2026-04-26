@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #0f2a2a;
+        padding: 24px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 12px;
+      }
+      .swatch {
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .chip {
+        height: 72px;
+      }
+      .label {
+        padding: 8px 10px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .name {
+        font-size: 11px;
+        font-weight: 500;
+        color: #f5f1e8;
+        letter-spacing: 0.04em;
+      }
+      .hex {
+        font-size: 10px;
+        color: rgba(245, 241, 232, 0.5);
+        margin-top: 2px;
+        font-variant-numeric: tabular-nums;
+      }
+      .role {
+        font-size: 9px;
+        color: rgba(245, 241, 232, 0.35);
+        margin-top: 2px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="swatch">
+        <div
+          class="chip"
+          style="
+            background: #0f2a2a;
+            border: 1px solid rgba(194, 163, 107, 0.3);
+          "
+        ></div>
+        <div class="label">
+          <div class="name">Primary</div>
+          <div class="hex">#0F2A2A</div>
+          <div class="role">Deep Teal</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #0a1e1e"></div>
+        <div class="label">
+          <div class="name">Primary Dark</div>
+          <div class="hex">#0A1E1E</div>
+          <div class="role">Footer / Nav</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #163535"></div>
+        <div class="label">
+          <div class="name">Primary Mid</div>
+          <div class="hex">#163535</div>
+          <div class="role">Hover / Card</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #eae3d5"></div>
+        <div class="label" style="background: rgba(0, 0, 0, 0.06)">
+          <div class="name" style="color: #1a2e2e">Secondary</div>
+          <div class="hex" style="color: #4a5e5e">#EAE3D5</div>
+          <div class="role" style="color: #888">Muted Sand</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #d9d0bd"></div>
+        <div class="label" style="background: rgba(0, 0, 0, 0.06)">
+          <div class="name" style="color: #1a2e2e">Sand Dim</div>
+          <div class="hex" style="color: #4a5e5e">#D9D0BD</div>
+          <div class="role" style="color: #888">Dividers / Light</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #c2a36b"></div>
+        <div class="label">
+          <div class="name">Accent</div>
+          <div class="hex">#C2A36B</div>
+          <div class="role">Antique Gold</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #7faf9b"></div>
+        <div class="label">
+          <div class="name">CTA</div>
+          <div class="hex">#7FAF9B</div>
+          <div class="role">Soft Sage</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #8fbfab"></div>
+        <div class="label">
+          <div class="name">CTA Hover</div>
+          <div class="hex">#8FBFAB</div>
+          <div class="role">Sage Hover</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #f5f1e8"></div>
+        <div class="label" style="background: rgba(0, 0, 0, 0.06)">
+          <div class="name" style="color: #1a2e2e">Text Light</div>
+          <div class="hex" style="color: #4a5e5e">#F5F1E8</div>
+          <div class="role" style="color: #888">On Dark Bg</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="chip" style="background: #1a2e2e"></div>
+        <div class="label">
+          <div class="name">Text Dark</div>
+          <div class="hex">#1A2E2E</div>
+          <div class="role">On Light Bg</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

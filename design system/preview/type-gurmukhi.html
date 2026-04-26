@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gurmukhi:wght@300;400;500&family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #0f2a2a;
+        padding: 28px 32px;
+      }
+      .label {
+        font-size: 9px;
+        font-weight: 500;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #c2a36b;
+        margin-bottom: 8px;
+      }
+      .block {
+        margin-bottom: 24px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(194, 163, 107, 0.12);
+      }
+      .block:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      .meta {
+        font-size: 10px;
+        color: rgba(245, 241, 232, 0.3);
+        margin-top: 6px;
+      }
+      .badge {
+        display: inline-block;
+        font-size: 9px;
+        padding: 2px 7px;
+        border: 1px solid rgba(127, 175, 155, 0.4);
+        border-radius: 2px;
+        color: #7faf9b;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="block">
+      <div class="badge">Pad Ched — Spaced</div>
+      <div class="label">Standard Gurmukhi (word-separated)</div>
+      <div
+        style="
+          font-family: 'Noto Sans Gurmukhi';
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 1.9;
+          color: #f5f1e8;
+          letter-spacing: -0.01em;
+        "
+      >
+        ਸਤਿ ਨਾਮੁ ਕਰਤਾ ਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ
+      </div>
+      <div class="meta">
+        22px / Noto Sans Gurmukhi 400 / standard word spacing
+      </div>
+    </div>
+    <div class="block">
+      <div class="badge">Larivaar — Continuous</div>
+      <div class="label">Continuous script (no word breaks)</div>
+      <div
+        style="
+          font-family: 'Noto Sans Gurmukhi';
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 1.9;
+          color: #f5f1e8;
+          letter-spacing: -0.01em;
+          word-spacing: -0.5em;
+        "
+      >
+        ਸਤਿਨਾਮੁਕਰਤਾਪੁਰਖੁਨਿਰਭਉਨਿਰਵੈਰੁਅਕਾਲਮੂਰਤਿਅਜੂਨੀਸੈਭੰਗੁਰਪ੍ਰਸਾਦਿ
+      </div>
+      <div class="meta">
+        22px / ls -0.01em / word-spacing collapsed — Larivaar mode
+      </div>
+    </div>
+    <div class="block">
+      <div class="label">Ik Onkar — Brand Glyph</div>
+      <div
+        style="
+          font-family: 'Noto Sans Gurmukhi';
+          font-size: 48px;
+          font-weight: 300;
+          color: #c2a36b;
+          line-height: 1;
+        "
+      >
+        ੴ
+      </div>
+      <div class="meta">
+        48px / Noto Sans Gurmukhi 300 / Accent gold — used as logo prefix &
+        section divider
+      </div>
+    </div>
+  </body>
+</html>

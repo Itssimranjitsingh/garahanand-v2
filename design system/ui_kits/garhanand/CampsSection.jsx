@@ -1,45 +1,46 @@
-'use client';
+// CampsSection.jsx — GarhAnand
+const CampsSection = () => {
+  const camps = [
+    {
+      year: '2024',
+      location: 'Anandpur Sahib',
+      title: 'Winter Larivaar Camp',
+      days: '5 days',
+      snippet:
+        'Forty-two students gathered in the sacred city of Anandpur for five days of morning paath, afternoon study, and evening reflection.',
+    },
+    {
+      year: '2023',
+      location: 'Amritsar',
+      title: 'Darbar Sahib Intensive',
+      days: '3 days',
+      snippet:
+        'Held in the shadow of Harmandir Sahib, participants studied Larivaar in the context of kirtan and seva.',
+    },
+    {
+      year: '2023',
+      location: 'Himachal Pradesh',
+      title: 'Mountain Retreat',
+      days: '7 days',
+      snippet:
+        'A remote study camp in the hills — minimal distraction, deep learning, and the sound of Gurbani in the open air.',
+    },
+  ];
 
-const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
+  const glyphColors = [
+    'rgba(194,163,107,0.15)',
+    'rgba(127,175,155,0.12)',
+    'rgba(194,163,107,0.10)',
+  ];
 
-const CAMPS = [
-  {
-    year: '2024',
-    location: 'Anandpur Sahib',
-    title: 'Winter Larivaar Camp',
-    days: '5 days',
-    snippet:
-      'Forty-two students gathered in the sacred city of Anandpur for five days of morning paath, afternoon study, and evening reflection.',
-  },
-  {
-    year: '2023',
-    location: 'Amritsar',
-    title: 'Darbar Sahib Intensive',
-    days: '3 days',
-    snippet:
-      'Held in the shadow of Harmandir Sahib, participants studied Larivaar in the context of kirtan and seva.',
-  },
-  {
-    year: '2023',
-    location: 'Himachal Pradesh',
-    title: 'Mountain Retreat',
-    days: '7 days',
-    snippet:
-      'A remote study camp in the hills — minimal distraction, deep learning, and the sound of Gurbani in the open air.',
-  },
-];
-
-export function HomeCamps() {
   return (
     <section
-      id="camps"
       style={{
-        background: '#0F2A2A',
+        background: 'var(--primary)',
         borderTop: '1px solid rgba(194,163,107,0.08)',
-        padding: '80px 0',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 32px' }}>
+      <div className="container">
         <div style={{ marginBottom: 48 }}>
           <div
             style={{
@@ -47,7 +48,7 @@ export function HomeCamps() {
               fontWeight: 500,
               letterSpacing: '0.14em',
               textTransform: 'uppercase',
-              color: '#7FAF9B',
+              color: 'var(--cta)',
               marginBottom: 10,
             }}
           >
@@ -55,15 +56,15 @@ export function HomeCamps() {
           </div>
           <h2
             style={{
-              fontFamily: FONT_DISPLAY,
+              fontFamily: 'var(--font-display)',
               fontSize: 'clamp(26px,3.5vw,38px)',
               fontWeight: 300,
               lineHeight: 1.15,
               letterSpacing: '-0.02em',
-              color: '#F5F1E8',
+              color: 'var(--text-light)',
             }}
           >
-            Camps &amp; Retreats
+            Camps & Retreats
           </h2>
         </div>
 
@@ -74,9 +75,9 @@ export function HomeCamps() {
             gap: 20,
           }}
         >
-          {CAMPS.map((c) => (
+          {camps.map((c, i) => (
             <div
-              key={c.title}
+              key={i}
               style={{
                 background: 'rgba(22,53,53,0.45)',
                 border: '1px solid rgba(194,163,107,0.15)',
@@ -92,11 +93,11 @@ export function HomeCamps() {
                 (e.currentTarget.style.borderColor = 'rgba(194,163,107,0.15)')
               }
             >
-              {/* Image placeholder */}
+              {/* Image placeholder — desaturated heritage texture */}
               <div
                 style={{
                   height: 120,
-                  background: '#0F2A2A',
+                  background: `radial-gradient(ellipse at center, ${glyphColors[i]} 0%, transparent 70%), #0F2A2A`,
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
@@ -105,7 +106,7 @@ export function HomeCamps() {
               >
                 <span
                   style={{
-                    fontFamily: 'var(--font-noto-gurmukhi), sans-serif',
+                    fontFamily: 'var(--font-gu)',
                     fontSize: 56,
                     color: 'rgba(194,163,107,0.25)',
                   }}
@@ -127,7 +128,7 @@ export function HomeCamps() {
                       fontWeight: 500,
                       letterSpacing: '0.1em',
                       textTransform: 'uppercase',
-                      color: '#7FAF9B',
+                      color: 'var(--cta)',
                     }}
                   >
                     {c.location}
@@ -140,10 +141,10 @@ export function HomeCamps() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: FONT_DISPLAY,
+                    fontFamily: 'var(--font-display)',
                     fontSize: 18,
                     fontWeight: 400,
-                    color: '#F5F1E8',
+                    color: 'var(--text-light)',
                     marginBottom: 10,
                     lineHeight: 1.25,
                   }}
@@ -154,7 +155,7 @@ export function HomeCamps() {
                   style={{
                     fontSize: 13,
                     lineHeight: 1.65,
-                    color: 'rgba(245,241,232,0.60)',
+                    color: 'var(--text-muted)',
                     fontStyle: 'italic',
                   }}
                 >
@@ -165,7 +166,7 @@ export function HomeCamps() {
           ))}
         </div>
 
-        {/* Pull quote */}
+        {/* Quote */}
         <div
           style={{
             marginTop: 64,
@@ -176,7 +177,6 @@ export function HomeCamps() {
           }}
         >
           <div
-            aria-hidden
             style={{
               width: 1,
               height: 40,
@@ -186,7 +186,7 @@ export function HomeCamps() {
           />
           <blockquote
             style={{
-              fontFamily: FONT_DISPLAY,
+              fontFamily: 'var(--font-display)',
               fontSize: 'clamp(18px,2.2vw,22px)',
               fontWeight: 300,
               fontStyle: 'italic',
@@ -195,9 +195,9 @@ export function HomeCamps() {
               marginBottom: 14,
             }}
           >
-            &quot;Learning Larivaar at the camp changed my relationship with
-            Gurbani entirely. The text came alive in a way I had never
-            experienced in twenty years of reading.&quot;
+            "Learning Larivaar at the camp changed my relationship with Gurbani
+            entirely. The text came alive in a way I had never experienced in
+            twenty years of reading."
           </blockquote>
           <div
             style={{
@@ -213,4 +213,6 @@ export function HomeCamps() {
       </div>
     </section>
   );
-}
+};
+
+Object.assign(window, { CampsSection });

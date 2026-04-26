@@ -1,0 +1,342 @@
+/* ============================================================
+   GarhAnand Design System — Colors & Typography
+   ============================================================ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600&family=Noto+Sans+Gurmukhi:wght@300;400;500&display=swap');
+
+/* ============================================================
+   COLOR TOKENS — Base Palette
+   ============================================================ */
+:root {
+  /* Brand Colors */
+  --color-primary: #0f2a2a; /* Deep teal — dominant surface */
+  --color-primary-dark: #0a1e1e; /* Deeper teal — footer / navbar */
+  --color-primary-mid: #163535; /* Mid teal — hover states on dark */
+  --color-secondary: #eae3d5; /* Muted sand — light surface */
+  --color-secondary-dim: #d9d0bd; /* Darker sand — dividers on light */
+  --color-accent: #c2a36b; /* Antique gold — decorative, borders */
+  --color-accent-dim: rgba(194, 163, 107, 0.2); /* Subtle gold border */
+  --color-accent-mid: rgba(194, 163, 107, 0.4); /* Hover gold border */
+  --color-cta: #7faf9b; /* Soft sage — primary CTA */
+  --color-cta-hover: #8fbfab; /* Lighter sage — hover */
+  --color-cta-active: #6f9f8b; /* Darker sage — active/pressed */
+
+  /* Text Colors */
+  --color-text-light: #f5f1e8; /* Warm near-white — headings on dark */
+  --color-text-muted: rgba(245, 241, 232, 0.6); /* Dimmed light text */
+  --color-text-dark: #1a2e2e; /* Dark teal — body on light bg */
+  --color-text-mid: #4a5e5e; /* Mid — captions on light */
+
+  /* Utility */
+  --color-overlay: rgba(10, 30, 30, 0.72); /* Image overlay */
+  --color-divider-dark: rgba(194, 163, 107, 0.15);
+  --color-divider-light: rgba(26, 46, 46, 0.12);
+  --color-white: #ffffff;
+  --color-transparent: transparent;
+}
+
+/* ============================================================
+   SEMANTIC COLOR TOKENS
+   ============================================================ */
+:root {
+  /* Surfaces */
+  --surface-page: var(--color-primary);
+  --surface-section: var(--color-primary);
+  --surface-alt: var(--color-secondary);
+  --surface-footer: var(--color-primary-dark);
+  --surface-card-dark: rgba(22, 53, 53, 0.6);
+  --surface-card-light: var(--color-white);
+  --surface-overlay: var(--color-overlay);
+
+  /* Foreground */
+  --fg-primary: var(--color-text-light);
+  --fg-secondary: var(--color-text-muted);
+  --fg-on-light: var(--color-text-dark);
+  --fg-on-light-muted: var(--color-text-mid);
+  --fg-accent: var(--color-accent);
+
+  /* Interactive */
+  --interactive-cta: var(--color-cta);
+  --interactive-cta-hover: var(--color-cta-hover);
+  --interactive-border: var(--color-accent);
+
+  /* Borders */
+  --border-subtle: var(--color-accent-dim);
+  --border-hover: var(--color-accent-mid);
+  --border-divider-dark: var(--color-divider-dark);
+  --border-divider-light: var(--color-divider-light);
+}
+
+/* ============================================================
+   TYPOGRAPHY TOKENS
+   ============================================================ */
+:root {
+  /* Font Families */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-gurmukhi: 'Noto Sans Gurmukhi', sans-serif;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Font Size Scale (8px base unit) */
+  --fs-xs: 0.625rem; /* 10px — fine print */
+  --fs-sm: 0.75rem; /* 12px — caption */
+  --fs-base: 1rem; /* 16px — body */
+  --fs-md: 1.125rem; /* 18px — body large */
+  --fs-lg: 1.25rem; /* 20px — lead */
+  --fs-xl: 1.5rem; /* 24px — h4 */
+  --fs-2xl: 1.875rem; /* 30px — h3 */
+  --fs-3xl: 2.25rem; /* 36px — h2 */
+  --fs-4xl: 3rem; /* 48px — h1 */
+  --fs-5xl: 3.75rem; /* 60px — hero title */
+  --fs-6xl: 4.5rem; /* 72px — display */
+
+  /* Line Heights */
+  --lh-tight: 1.1;
+  --lh-snug: 1.2;
+  --lh-normal: 1.4;
+  --lh-relaxed: 1.6;
+  --lh-loose: 1.8;
+
+  /* Letter Spacing */
+  --ls-tight: -0.02em;
+  --ls-normal: 0em;
+  --ls-wide: 0.04em;
+  --ls-wider: 0.08em;
+  --ls-widest: 0.16em;
+
+  /* Gurmukhi-specific */
+  --ls-larivaar: -0.01em; /* Slightly tighter for continuous script */
+  --lh-larivaar: 1.9; /* More generous for dense Gurmukhi */
+}
+
+/* ============================================================
+   SEMANTIC TYPOGRAPHY ELEMENTS
+   ============================================================ */
+
+/* Display */
+.type-display {
+  font-family: var(--font-display);
+  font-size: var(--fs-6xl);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  color: var(--fg-primary);
+}
+
+/* Headings */
+h1,
+.type-h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+}
+h2,
+.type-h2 {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-snug);
+  letter-spacing: var(--ls-tight);
+}
+h3,
+.type-h3 {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+}
+h4,
+.type-h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-normal);
+}
+h5,
+.type-h5 {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}
+h6,
+.type-label {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+}
+
+/* Body */
+p,
+.type-body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-relaxed);
+}
+.type-body-lg {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+}
+.type-lead {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-light);
+  font-style: italic;
+  line-height: var(--lh-relaxed);
+}
+.type-caption {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-normal);
+  letter-spacing: var(--ls-wide);
+}
+
+/* Gurmukhi */
+.type-gurmukhi {
+  font-family: var(--font-gurmukhi);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-larivaar);
+  letter-spacing: var(--ls-larivaar);
+}
+.type-gurmukhi-lg {
+  font-family: var(--font-gurmukhi);
+  font-size: var(--fs-2xl);
+  line-height: var(--lh-larivaar);
+  letter-spacing: var(--ls-larivaar);
+}
+
+/* Larivaar Mode */
+.larivaar-text {
+  font-family: var(--font-gurmukhi);
+  font-size: var(--fs-xl);
+  line-height: var(--lh-larivaar);
+  letter-spacing: var(--ls-larivaar);
+  word-spacing: -0.5em; /* Collapse spaces for continuous look */
+}
+.larivaar-text .larivaar-word {
+  display: inline;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+.larivaar-text .larivaar-word:hover {
+  background-color: rgba(194, 163, 107, 0.25);
+  color: var(--color-text-light);
+}
+
+/* ============================================================
+   SPACING TOKENS (8px base unit)
+   ============================================================ */
+:root {
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* Section spacing */
+  --section-gap-desktop: 80px;
+  --section-gap-mobile: 40px;
+
+  /* Layout */
+  --max-width: 1200px;
+  --content-width: 720px;
+  --gutter: 24px;
+
+  /* Border Radius */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --shadow-float: 0 1px 4px rgba(0, 0, 0, 0.18), 0 4px 16px rgba(0, 0, 0, 0.08);
+
+  /* Animation */
+  --anim-fast: 200ms ease-out;
+  --anim-normal: 350ms ease-out;
+  --anim-slow: 500ms ease-out;
+}
+
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  color: var(--fg-primary);
+  background-color: var(--surface-page);
+  line-height: var(--lh-relaxed);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Utility classes */
+.text-accent {
+  color: var(--color-accent);
+}
+.text-muted {
+  color: var(--fg-secondary);
+}
+.text-sage {
+  color: var(--color-cta);
+}
+.text-dark {
+  color: var(--fg-on-light);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-footer {
+  background-color: var(--color-primary-dark);
+}
+
+/* Divider */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border-divider-dark);
+  margin: var(--space-6) 0;
+}
+.divider--light {
+  border-top-color: var(--border-divider-light);
+}
+
+/* Container */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}

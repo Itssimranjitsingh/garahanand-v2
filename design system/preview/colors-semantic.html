@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #0f2a2a;
+        padding: 24px;
+      }
+      .rows {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .chip {
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+        flex-shrink: 0;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        flex: 1;
+      }
+      .token {
+        font-size: 11px;
+        font-weight: 500;
+        color: #c2a36b;
+        font-family: monospace;
+      }
+      .desc {
+        font-size: 10px;
+        color: rgba(245, 241, 232, 0.55);
+      }
+      .divider {
+        height: 1px;
+        background: rgba(194, 163, 107, 0.15);
+        margin: 4px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="rows">
+      <div class="row">
+        <div
+          class="chip"
+          style="
+            background: #0f2a2a;
+            border: 1px solid rgba(194, 163, 107, 0.3);
+          "
+        ></div>
+        <div class="info">
+          <div class="token">--surface-page</div>
+          <div class="desc">Main page background (dark teal)</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" style="background: #eae3d5"></div>
+        <div class="info">
+          <div class="token">--surface-alt</div>
+          <div class="desc">Alternating light sections (sand)</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" style="background: #0a1e1e"></div>
+        <div class="info">
+          <div class="token">--surface-footer</div>
+          <div class="desc">Footer & navbar background</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" style="background: rgba(22, 53, 53, 0.6)"></div>
+        <div class="info">
+          <div class="token">--surface-card-dark</div>
+          <div class="desc">Card on dark background (semi-transparent)</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="row">
+        <div class="chip" style="background: #f5f1e8"></div>
+        <div class="info">
+          <div class="token">--fg-primary</div>
+          <div class="desc">Heading text on dark backgrounds</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" style="background: rgba(245, 241, 232, 0.6)"></div>
+        <div class="info">
+          <div class="token">--fg-secondary</div>
+          <div class="desc">Body / muted text on dark</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" style="background: #c2a36b"></div>
+        <div class="info">
+          <div class="token">--fg-accent</div>
+          <div class="desc">Gold accent text, labels, decorative</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chip" style="background: #7faf9b"></div>
+        <div class="info">
+          <div class="token">--interactive-cta</div>
+          <div class="desc">Buttons, links, active elements</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

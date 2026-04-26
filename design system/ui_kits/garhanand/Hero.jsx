@@ -1,60 +1,55 @@
-'use client';
+// Hero.jsx — GarhAnand
+const Hero = ({ onNav }) => {
+  const heroStyle = {
+    minHeight: '100vh',
+    background: '#0A1E1E',
+    backgroundImage: 'url("../../assets/manuscript-bg.jpeg")',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'relative',
+    overflow: 'hidden',
+    paddingTop: 64,
+  };
 
-import Image from 'next/image';
+  // Dark teal overlay over the manuscript image
+  const grainStyle = {
+    position: 'absolute',
+    inset: 0,
+    pointerEvents: 'none',
+    background: 'rgba(10,30,30,0.82)',
+  };
 
-const FONT_DISPLAY = 'var(--font-cormorant), Georgia, serif';
-const FONT_GU = 'var(--font-noto-gurmukhi), sans-serif';
+  const glyphBgStyle = {
+    position: 'absolute',
+    fontSize: 320,
+    fontFamily: 'var(--font-gu)',
+    color: 'rgba(194,163,107,0.04)',
+    lineHeight: 1,
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%,-50%)',
+    pointerEvents: 'none',
+    userSelect: 'none',
+    letterSpacing: '-0.02em',
+  };
 
-export function HomeHero() {
+  const dividerStyle = {
+    width: 48,
+    height: 1,
+    background: 'rgba(194,163,107,0.4)',
+    margin: '24px auto',
+  };
+
   return (
-    <section
-      style={{
-        minHeight: '100vh',
-        background: '#0A1E1E',
-        backgroundImage: 'url("/assets/others/manuscript-bg.jpeg")',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        position: 'relative',
-        overflow: 'hidden',
-        paddingTop: 64,
-      }}
-    >
-      {/* Dark overlay */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          background: 'rgba(10,30,30,0.82)',
-          pointerEvents: 'none',
-        }}
-      />
+    <section style={heroStyle}>
+      <div style={grainStyle} />
+      <div style={glyphBgStyle}>ੴ</div>
 
-      {/* Ghost ੴ glyph */}
+      {/* Gold horizontal rule top */}
       <div
-        aria-hidden
-        style={{
-          position: 'absolute',
-          fontSize: 320,
-          fontFamily: FONT_GU,
-          color: 'rgba(194,163,107,0.04)',
-          lineHeight: 1,
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%,-50%)',
-          pointerEvents: 'none',
-          userSelect: 'none',
-          letterSpacing: '-0.02em',
-        }}
-      >
-        ੴ
-      </div>
-
-      {/* Gold rule under navbar */}
-      <div
-        aria-hidden
         style={{
           position: 'absolute',
           top: 64,
@@ -66,45 +61,16 @@ export function HomeHero() {
       />
 
       <div
-        style={{
-          maxWidth: 1200,
-          margin: '0 auto',
-          padding: '0 32px',
-          textAlign: 'center',
-          position: 'relative',
-          zIndex: 1,
-        }}
+        className="container"
+        style={{ textAlign: 'center', position: 'relative', zIndex: 1 }}
       >
-        <figure
-          style={{
-            position: 'relative',
-            width: '100%',
-            maxWidth: 384,
-            height: 208,
-            margin: '0 auto 32px',
-            userSelect: 'none',
-          }}
-        >
-          <Image
-            src="/assets/others/satgur_prasad_white.png"
-            alt="Ik Onkar and Satgur Prasad in Gurmukhi calligraphy"
-            fill
-            sizes="(max-width: 768px) 100vw, 24rem"
-            priority
-            style={{
-              objectFit: 'contain',
-              objectPosition: 'center',
-            }}
-          />
-        </figure>
-
         <div
           style={{
             fontSize: 10,
             fontWeight: 500,
             letterSpacing: '0.16em',
             textTransform: 'uppercase',
-            color: '#C2A36B',
+            color: 'var(--accent)',
             marginBottom: 24,
           }}
         >
@@ -113,12 +79,12 @@ export function HomeHero() {
 
         <h1
           style={{
-            fontFamily: FONT_DISPLAY,
+            fontFamily: 'var(--font-display)',
             fontSize: 'clamp(40px,6vw,72px)',
             fontWeight: 300,
             lineHeight: 1.1,
             letterSpacing: '-0.02em',
-            color: '#F5F1E8',
+            color: 'var(--text-light)',
             maxWidth: 720,
             margin: '0 auto 16px',
           }}
@@ -126,26 +92,21 @@ export function HomeHero() {
           Return to the Unbroken
           <br />
           <em
-            style={{ fontStyle: 'italic', color: '#C2A36B', fontWeight: 300 }}
+            style={{
+              fontStyle: 'italic',
+              color: 'var(--accent)',
+              fontWeight: 300,
+            }}
           >
             Word of the Guru
           </em>
         </h1>
 
-        {/* Gold divider */}
-        <div
-          aria-hidden
-          style={{
-            width: 48,
-            height: 1,
-            background: 'rgba(194,163,107,0.4)',
-            margin: '24px auto',
-          }}
-        />
+        <div style={dividerStyle} />
 
         <p
           style={{
-            fontFamily: FONT_DISPLAY,
+            fontFamily: 'var(--font-display)',
             fontSize: 'clamp(16px,2vw,20px)',
             fontWeight: 300,
             fontStyle: 'italic',
@@ -167,64 +128,64 @@ export function HomeHero() {
             flexWrap: 'wrap',
           }}
         >
-          <a
-            href="#learn"
+          <button
+            onClick={() => onNav('learn')}
             style={{
+              fontFamily: 'var(--font-body)',
               fontSize: 13,
               fontWeight: 500,
               letterSpacing: '0.04em',
               padding: '13px 30px',
-              background: '#7FAF9B',
-              color: '#0F2A2A',
+              background: 'var(--cta)',
+              color: 'var(--primary)',
               border: 'none',
               borderRadius: 4,
               cursor: 'pointer',
-              textDecoration: 'none',
-              display: 'inline-block',
               transition: 'background 200ms ease',
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.background = '#8FBFAB')}
-            onMouseLeave={(e) => (e.currentTarget.style.background = '#7FAF9B')}
+            onMouseEnter={(e) =>
+              (e.target.style.background = 'var(--cta-hover)')
+            }
+            onMouseLeave={(e) => (e.target.style.background = 'var(--cta)')}
           >
             Begin Learning
-          </a>
-          <a
-            href="#about"
+          </button>
+          <button
+            onClick={() => onNav('about')}
             style={{
+              fontFamily: 'var(--font-body)',
               fontSize: 13,
               fontWeight: 500,
               letterSpacing: '0.04em',
               padding: '13px 30px',
               background: 'transparent',
-              color: '#C2A36B',
-              border: '1px solid #C2A36B',
+              color: 'var(--accent)',
+              border: '1px solid var(--accent)',
               borderRadius: 4,
               cursor: 'pointer',
-              textDecoration: 'none',
-              display: 'inline-block',
-              transition: 'background 200ms ease',
+              transition: 'all 200ms ease',
             }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.background = 'rgba(194,163,107,0.08)')
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.background = 'transparent')
-            }
+            onMouseEnter={(e) => {
+              e.target.style.background = 'rgba(194,163,107,0.08)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = 'transparent';
+            }}
           >
             Our Mission
-          </a>
+          </button>
         </div>
 
-        {/* Mool Mantar Larivaar specimen */}
+        {/* Gurmukhi specimen */}
         <div style={{ marginTop: 64, opacity: 0.35 }}>
           <div
             style={{
-              fontFamily: FONT_GU,
+              fontFamily: 'var(--font-gu)',
               fontSize: 'clamp(14px,1.8vw,18px)',
               fontWeight: 300,
               letterSpacing: '-0.01em',
               lineHeight: 1.9,
-              color: '#F5F1E8',
+              color: 'var(--text-light)',
               wordSpacing: '-0.45em',
             }}
           >
@@ -246,7 +207,6 @@ export function HomeHero() {
 
       {/* Scroll hint */}
       <div
-        aria-hidden
         style={{
           position: 'absolute',
           bottom: 32,
@@ -269,4 +229,6 @@ export function HomeHero() {
       </div>
     </section>
   );
-}
+};
+
+Object.assign(window, { Hero });
